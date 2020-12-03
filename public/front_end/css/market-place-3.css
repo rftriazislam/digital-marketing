@@ -30,7 +30,6 @@
   border: 1px solid #e1e1e1;
   border-top: 0;
   z-index: 100;
-  -webkit-transition: all .4s ease;
   transition: all .4s ease;
   visibility: hidden;
   opacity: 0;
@@ -75,7 +74,6 @@
 }
 
 .header--market-place-3.header--sticky .header__top .menu--product-categories:hover .menu__content {
-  -webkit-transform: translateY(8px);
   transform: translateY(8px);
 }
 
@@ -84,18 +82,20 @@
   background-color: #eeeeee;
 }
 
+#homepage-5 .ps-home-banner ul, #homepage-5 .ps-home-banner ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 #homepage-5 .ps-home-banner .owl-slider .owl-item img {
   width: 100%;
 }
 
 #homepage-5 .ps-home-banner .container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 #homepage-5 .ps-home-banner .container > * {
@@ -137,15 +137,10 @@
 
 #homepage-5 .ps-home-banner .ps-section__right {
   max-width: 382px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 #homepage-5 .ps-home-banner .ps-section__right > a {
@@ -170,9 +165,7 @@
 
 @media (max-width: 991px) {
   #homepage-5 .ps-home-banner .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-flow: column wrap;
+    flex-flow: column wrap;
   }
   #homepage-5 .ps-home-banner .container .ps-section__center {
     max-width: 100%;

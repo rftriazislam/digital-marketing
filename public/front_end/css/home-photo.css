@@ -4,10 +4,8 @@
   left: 0;
   width: 100%;
   z-index: 20;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 25px 30px;
 }
 
@@ -24,10 +22,8 @@
 }
 
 .header--photo .ps-block--user-header .ps-block__right {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .header--photo .ps-block--user-header .ps-block__right a:hover {
@@ -35,12 +31,9 @@
 }
 
 .header--photo .header__language {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header--photo .header__language .select2 {
@@ -61,10 +54,8 @@
 }
 
 .header--photo .header__content {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .header--photo.header--sticky {
@@ -123,11 +114,8 @@
 
 @media (min-width: 992px) {
   #homepage-photo .ps-home-testimonial .ps-section__wrapper {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row nowrap;
+    flex-flow: row nowrap;
   }
   #homepage-photo .ps-home-testimonial .ps-section__wrapper > * {
     width: 100%;
@@ -156,13 +144,9 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 #homepage-photo .ps-home-media ul.ps-list li {
@@ -184,12 +168,9 @@
 }
 
 #homepage-photo .ps-home-media .ps-section__footer .ps-section__morelink {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   width: 100px;
   height: 100px;
@@ -216,10 +197,8 @@
 
 #homepage-photo .ps-home-search {
   position: relative;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   min-height: 560px;
 }
 
@@ -319,13 +298,9 @@
 }
 
 #homepage-photo .ps-home-share-work .ps-section__content {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-          flex-flow: column-reverse wrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  flex-flow: column-reverse wrap;
+  justify-content: space-between;
 }
 
 #homepage-photo .ps-home-share-work .ps-section__footer {
@@ -346,9 +321,7 @@
     padding-top: 0;
   }
   #homepage-photo .ps-home-share-work .ps-section__content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row nowrap;
+    flex-flow: row nowrap;
   }
 }
 
@@ -369,10 +342,8 @@
     font-size: 40px;
   }
   #homepage-photo .ps-home-share-work .ps-section__content {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   #homepage-photo .ps-home-share-work .ps-section__content > * {
     width: 100%;
@@ -426,15 +397,10 @@
 }
 
 #homepage-photo .ps-home-brands .ps-section__content {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #homepage-photo .ps-home-brands .ps-section__content > a {
@@ -451,9 +417,7 @@
 
 @media (min-width: 768px) {
   #homepage-photo .ps-home-brands .ps-section__content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row nowrap;
+    flex-flow: row nowrap;
   }
 }
 

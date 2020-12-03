@@ -45,11 +45,9 @@
 }
 
 .header--furniture .header__left {
-  display: -webkit-box;
   display: flex;
   max-width: 270px;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .header--furniture .ps-form--quick-search {
@@ -161,7 +159,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding-left: 140px;
 }

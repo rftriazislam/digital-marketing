@@ -18,3 +18,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/','FrontendController@home');
+
+Route::get('/login','FrontendController@login');
+
+Route::get('/signup ','FrontendController@signup');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

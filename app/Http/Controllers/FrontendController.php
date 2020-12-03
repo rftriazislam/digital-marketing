@@ -10,4 +10,7 @@ class FrontendController extends Controller
     {
         return view('frontend.home.page.maincontent');
     }
+    public function login(){
+        return view('auth.login');
+    }
 }

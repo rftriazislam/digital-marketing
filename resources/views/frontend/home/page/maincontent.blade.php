@@ -1,1251 +1,1427 @@
-@extends('frontend.home.welcome');
+@extends('frontend.home.master')
 @section('maincontent')
-<div id="homepage-1">
-    <div class="ps-home-banner ps-home-banner--1">
-        <div class="ps-container">
-            <div class="ps-section__left">
-                <div class="ps-carousel--nav-inside owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on">
-                    <div class="ps-banner"><a href="#"><img src="{{asset('front_end/img/slider/home-1/slide-1.jpg') }}" alt=""></a></div>
-                    <div class="ps-banner"><a href="#"><img src="{{asset('front_end/img/slider/home-1/slide-2.jpg') }}" alt=""></a></div>
-                    <div class="ps-banner"><a href="#"><img src="{{asset('front_end/img/slider/home-1/slide-3.jpg') }}" alt=""></a></div>
-                </div>
-            </div>
-            <div class="ps-section__right"><a class="ps-collection" href="#"><img src="{{asset('front_end/img/slider/home-1/promotion-1.jpg') }}" alt=""></a><a class="ps-collection" href="#"><img src="img/slider/home-1/promotion-2.jpg" alt=""></a></div>
-        </div>
-    </div>
-    <div class="ps-site-features">
-        <div class="ps-container">
-            <div class="ps-block--site-features">
-                <div class="ps-block__item">
-                    <div class="ps-block__left"><i class="icon-rocket"></i></div>
-                    <div class="ps-block__right">
-                        <h4>Free Delivery</h4>
-                        <p>For all oders over $99</p>
-                    </div>
-                </div>
-                <div class="ps-block__item">
-                    <div class="ps-block__left"><i class="icon-sync"></i></div>
-                    <div class="ps-block__right">
-                        <h4>90 Days Return</h4>
-                        <p>If goods have problems</p>
-                    </div>
-                </div>
-                <div class="ps-block__item">
-                    <div class="ps-block__left"><i class="icon-credit-card"></i></div>
-                    <div class="ps-block__right">
-                        <h4>Secure Payment</h4>
-                        <p>100% secure payment</p>
-                    </div>
-                </div>
-                <div class="ps-block__item">
-                    <div class="ps-block__left"><i class="icon-bubbles"></i></div>
-                    <div class="ps-block__right">
-                        <h4>24/7 Support</h4>
-                        <p>Dedicated support</p>
-                    </div>
-                </div>
-                <div class="ps-block__item">
-                    <div class="ps-block__left"><i class="icon-gift"></i></div>
-                    <div class="ps-block__right">
-                        <h4>Gift Service</h4>
-                        <p>Support gift service</p>
-                    </div>
-                </div>
+<div id="homepage-7">
+    <div class="ps-home-banner">
+      <div class="container">
+        <div class="ps-section__left">
+          <div class="ps-carousel--nav-inside owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on" data-owl-animate-in="fadeIn" data-owl-animate-out="fadeOut">
+              <a href="#"><img src="{{ asset('front_end/img/slider/home-7/1.jpg') }}" alt=""></a>
+              <a href="#"><img src="{{ asset('front_end/img/slider/home-7/2.jpg') }}" alt=""></a>
+              <a href="#"><img src="{{ asset('front_end/img/slider/home-7/3.jpg') }}" alt=""></a>
             </div>
         </div>
-    </div>
-    <div class="ps-deal-of-day">
-        <div class="ps-container">
-            <div class="ps-section__header">
-                <div class="ps-block--countdown-deal">
-                    <div class="ps-block__left">
-                        <h3>Deals of the day</h3>
-                    </div>
-                    <div class="ps-block__right">
-                        <figure>
-                            <figcaption>End in:</figcaption>
-                            <ul class="ps-countdown" data-time="July 21, 2020 15:37:25">
-                                <li><span class="days"></span></li>
-                                <li><span class="hours"></span></li>
-                                <li><span class="minutes"></span></li>
-                                <li><span class="seconds"></span></li>
-                            </ul>
-                        </figure>
-                    </div>
-                </div><a href="#">View all</a>
-            </div>
-            <div class="ps-section__content">
-                <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="30" data-owl-nav="true" data-owl-dots="true" data-owl-item="7" data-owl-item-xs="2" data-owl-item-sm="3" data-owl-item-md="4" data-owl-item-lg="5" data-owl-item-xl="6" data-owl-duration="1000" data-owl-mousedrag="on">
-                    <div class="ps-product ps-product--inner">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/1.jpg')}}" alt=""></a>
-                            <div class="ps-product__badge">-16%</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container">
-                            <p class="ps-product__price sale">$567.99 <del>$670.00 </del><small>18% off</small></p>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Korea Long Sofa Fabric In Blue Navy Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <div class="ps-product__progress-bar ps-progress" data-value="25">
-                                    <div class="ps-progress__value"><span></span></div>
-                                    <p>Sold:49</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product ps-product--inner">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/2.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container">
-                            <p class="ps-product__price">$101.99<small>18% off</small></p>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Aroma Rice Cooker</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <div class="ps-product__progress-bar ps-progress" data-value="26">
-                                    <div class="ps-progress__value"><span></span></div>
-                                    <p>Sold:4</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product ps-product--inner">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/3.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge">-25%</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container">
-                            <p class="ps-product__price sale">$42.00 <del>$60.00 </del><small>18% off</small></p>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Simple Plastice Chair In White Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <div class="ps-product__progress-bar ps-progress" data-value="31">
-                                    <div class="ps-progress__value"><span></span></div>
-                                    <p>Sold:30</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product ps-product--inner">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/4.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container">
-                            <p class="ps-product__price">$320.00<small>18% off</small></p>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Korea Fabric Chair In Brown Colorr</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <div class="ps-product__progress-bar ps-progress" data-value="99">
-                                    <div class="ps-progress__value"><span></span></div>
-                                    <p>Sold:92</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product ps-product--inner">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/5.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container">
-                            <p class="ps-product__price">$85.00<small>18% off</small></p>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Set 14-Piece Knife From KichiKit</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <div class="ps-product__progress-bar ps-progress" data-value="89">
-                                    <div class="ps-progress__value"><span></span></div>
-                                    <p>Sold:81</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product ps-product--inner">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/6.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container">
-                            <p class="ps-product__price">$92.00<small>18% off</small></p>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Magic Bullet NutriBullet Pro 900 Series Blender</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <div class="ps-product__progress-bar ps-progress" data-value="55">
-                                    <div class="ps-progress__value"><span></span></div>
-                                    <p>Sold:8</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product ps-product--inner">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/7.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge">-46%</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container">
-                            <p class="ps-product__price sale">$42.00 <del>$60.00 </del><small>18% off</small></p>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Letter Printed Cushion Cover Cotton</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <div class="ps-product__progress-bar ps-progress" data-value="6">
-                                    <div class="ps-progress__value"><span></span></div>
-                                    <p>Sold:59</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="ps-section__right">
+            <a class="ps-collection" href="#"><img src="{{ asset('front_end/img/slider/home-7/promotion-1.jpg') }}" alt=""></a>
+            <a class="ps-collection" href="#"><img src="{{ asset('front_end/img/slider/home-7/promotion-2.jpg') }}" alt=""></a>
         </div>
-    </div>
-    <div class="ps-home-ads">
-        <div class="ps-container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 "><a class="ps-collection" href="#"><img src="{{asset('front_end/img/collection/home-1/1.jpg') }}" alt=""></a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 "><a class="ps-collection" href="#"><img src="{{asset('front_end/img/collection/home-1/2.jpg') }}" alt=""></a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 "><a class="ps-collection" href="#"><img src="{{asset('front_end/img/collection/home-1/3.jpg') }}" alt=""></a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="ps-top-categories">
-        <div class="ps-container">
-            <h3>Top categories of the month</h3>
-            <div class="row">
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/1.jpg'
-                    
-                    ) }}" alt="">
-                        <p>Electronics</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/2.jpg')}}" alt="">
-                        <p>Clothings</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/3.jpg') }}" alt="">
-                        <p>Computers</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/4.jpg') }}" alt="">
-                        <p>Home & Kitchen</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/5.jpg') }}" alt="">
-                        <p>Health & Beauty</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/6.jpg') }}" alt="">
-                        <p>Health & Beauty</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/7.jpg') }}" alt="">
-                        <p>Jewelry & Watch</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 ">
-                    <div class="ps-block--category"><a class="ps-block__overlay" href="shop-default.html"></a><img src="{{asset('front_end/img/categories/8.jpg') }}" alt="">
-                        <p>Technology Toys</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <h3>Top categories of the month</h3>
+        <div class="row">
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 ">
+                        <div class="ps-block--category-2" data-mh="categories">
+                          <div class="ps-block__thumbnail"><img src="{{ asset('front_end/img/categories/electronic/2.jpg') }}" alt=""></div>
+                          <div class="ps-block__content">
+                            <h4>Tv Televisions</h4>
+                            <ul>
+                              <li><a href="shop-default.html">Smart TV</a></li>
+                              <li><a href="shop-default.html">4K Ultra HD TVs</a></li>
+                              <li><a href="shop-default.html">LED TVs</a></li>
+                              <li><a href="shop-default.html">OLED TVs</a></li>
+                              <li><a href="shop-default.html">Accessories</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 ">
+                        <div class="ps-block--category-2" data-mh="categories">
+                          <div class="ps-block__thumbnail"><img src="{{ asset('front_end/img/categories/electronic/4.jpg') }}" alt=""></div>
+                          <div class="ps-block__content">
+                            <h4>Air Conditioners</h4>
+                            <ul>
+                              <li><a href="shop-default.html">Type Hanging On Wall</a></li>
+                              <li><a href="shop-default.html">Type Erect</a></li>
+                              <li><a href="shop-default.html">Type Hanging On Celling</a></li>
+                              <li><a href="shop-default.html">Accessories</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 ">
+                        <div class="ps-block--category-2" data-mh="categories">
+                          <div class="ps-block__thumbnail"><img src="{{ asset('front_end/img/categories/electronic/3.jpg') }}" alt=""></div>
+                          <div class="ps-block__content">
+                            <h4>Washing Machine</h4>
+                            <ul>
+                              <li><a href="shop-default.html">Type Hanging On Wall</a></li>
+                              <li><a href="shop-default.html">Type Erect</a></li>
+                              <li><a href="shop-default.html">Type Hanging On Celling</a></li>
+                              <li><a href="shop-default.html">Accessories</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 ">
+                        <div class="ps-block--category-2" data-mh="categories">
+                          <div class="ps-block__thumbnail"><img src="{{ asset('front_end/img/categories/electronic/1.jpg') }}" alt=""></div>
+                          <div class="ps-block__content">
+                            <h4>Audios &amp; Theaters</h4>
+                            <ul>
+                              <li><a href="shop-default.html">Speakers</a></li>
+                              <li><a href="shop-default.html">Home Theater System</a></li>
+                              <li><a href="shop-default.html">Wireless Audio</a></li>
+                              <li><a href="shop-default.html">Headphone</a></li>
+                              <li><a href="shop-default.html">Accessories</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 ">
+                        <div class="ps-block--category-2" data-mh="categories">
+                          <div class="ps-block__thumbnail"><img src="{{ asset('front_end/img/categories/electronic/6.jpg') }}" alt=""></div>
+                          <div class="ps-block__content">
+                            <h4>Office Electronics</h4>
+                            <ul>
+                              <li><a href="shop-default.html">Printers</a></li>
+                              <li><a href="shop-default.html">Store &amp; Business</a></li>
+                              <li><a href="shop-default.html">Scanners</a></li>
+                              <li><a href="shop-default.html">Projectors</a></li>
+                              <li><a href="shop-default.html">Phones</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 ">
+                        <div class="ps-block--category-2" data-mh="categories">
+                          <div class="ps-block__thumbnail"><img src="{{ asset('front_end/img/categories/electronic/8.jpg') }}" alt=""></div>
+                          <div class="ps-block__content">
+                            <h4>Office Electronics</h4>
+                            <ul>
+                              <li><a href="shop-default.html">Printers</a></li>
+                              <li><a href="shop-default.html">Store &amp; Business</a></li>
+                              <li><a href="shop-default.html">Scanners</a></li>
+                              <li><a href="shop-default.html">Projectors</a></li>
+                              <li><a href="shop-default.html">Phones</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
         </div>
+      </div>
     </div>
-    <div class="ps-product-list ps-clothings">
-        <div class="ps-container">
-            <div class="ps-section__header">
-                <h3>Consumer Electronics</h3>
-                <ul class="ps-section__links">
-                    <li><a href="shop-grid.html">New Arrivals</a></li>
-                    <li><a href="shop-grid.html">Best seller</a></li>
-                    <li><a href="shop-grid.html">Must Popular</a></li>
-                    <li><a href="shop-grid.html">View All</a></li>
-                </ul>
+    <div class="ps-deal-of-day">
+      <div class="container">
+        <div class="ps-section__header">
+          <div class="ps-block--countdown-deal">
+            <div class="ps-block__left">
+              <h3>Deal of the day</h3>
             </div>
-            <div class="ps-section__content">
-                <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="7" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-item-xl="6" data-owl-duration="1000" data-owl-mousedrag="on">
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/1.jpg') }}" alt=""></a>
+            <div class="ps-block__right">
+              <figure>
+                <figcaption>End in:</figcaption>
+                <ul class="ps-countdown" data-time="July 21, 2021 15:37:25">
+                  <li><span class="days"></span></li>
+                  <li><span class="hours"></span></li>
+                  <li><span class="minutes"></span></li>
+                  <li><span class="seconds"></span></li>
+                </ul>
+              </figure>
+            </div>
+          </div><a href="shop-default.html">View all</a>
+        </div>
+        <div class="ps-section__content">
+          <div class="ps-carousel--nav owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="30" data-owl-nav="true" data-owl-dots="true" data-owl-item="5" data-owl-item-xs="2" data-owl-item-sm="3" data-owl-item-md="4" data-owl-item-lg="4" data-owl-item-xl="5" data-owl-duration="1000" data-owl-mousedrag="on">
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/1.jpg')}}" alt=""></a>
+                <div class="ps-product__badge">-16%</div>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price sale">$567.99 <del>$670.00 </del><small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>01</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="33">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:70</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/2.jpg')}}" alt=""></a>
+                <div class="ps-product__badge out-stock">Out Of Stock</div>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price">$101.99<small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Xbox One Wireless Controller Black Color</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>01</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="40">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:59</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/3.jpg')}}" alt=""></a>
+                <div class="ps-product__badge">-25%</div>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price sale">$42.00 <del>$60.00 </del><small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Sound Intone I65 Earphone White Version</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>02</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="59">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:17</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/4.jpg')}}" alt=""></a>
+                <div class="ps-product__badge out-stock">Out Of Stock</div>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price">$320.00<small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Samsung Gear VR Virtual Reality Headset</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>01</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="62">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:26</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/5.jpg')}}" alt=""></a>
+                <div class="ps-product__badge out-stock">Out Of Stock</div>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price">$85.00<small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Samsung UHD TV 24inch Reality Headset</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>01</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="72">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:58</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/6.jpg')}}" alt=""></a>
+                <div class="ps-product__badge out-stock">Out Of Stock</div>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price">$92.00<small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">EPSION Plaster Printer Reality HD Card</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>01</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="57">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:74</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/7.jpg')}}" alt=""></a>
+                <div class="ps-product__badge">-46%</div>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price sale">$42.00 <del>$60.00 </del><small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">LG White Front Load Steam Washer</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>02</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="61">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:84</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/8.jpg')}}" alt=""></a>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price">$42.00<small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Edifier Powered Bookshelf Speakers</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>02</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="78">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:66</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/9.jpg')}}" alt=""></a>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price">$42.00<small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>02</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="58">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:9</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ps-product ps-product--inner">
+              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/10.jpg')}}" alt=""></a>
+                <ul class="ps-product__actions">
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                </ul>
+              </div>
+              <div class="ps-product__container">
+                <p class="ps-product__price">$42.00<small>18% off</small></p>
+                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                  <div class="ps-product__rating">
+                                <select class="ps-rating" data-read-only="true">
+                                  <option value="1">1</option>
+                                  <option value="1">2</option>
+                                  <option value="1">3</option>
+                                  <option value="1">4</option>
+                                  <option value="2">5</option>
+                                </select><span>02</span>
+                  </div>
+                  <div class="ps-product__progress-bar ps-progress" data-value="84">
+                    <div class="ps-progress__value"><span></span></div>
+                    <p>Sold:45</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ps-promotions">
+      <div class="container">
+        <div class="row">
+                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 "><a class="ps-collection" href="shop-default.html"><img src="{{ asset('front_end/img/promotions/home-7/1.jpg')}}" alt=""></a>
+                      </div>
+                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 "><a class="ps-collection" href="shop-default.html"><img src="{{ asset('front_end/img/promotions/home-7/2.jpg')}}" alt=""></a>
+                      </div>
+        </div>
+      </div>
+    </div>
+    <div class="ps-product-list ps-product-list--2">
+      <div class="container">
+        <div class="ps-section__header">
+          <h3>Best Seller In The Last Month</h3>
+          <ul class="ps-section__links">
+            <li><a href="shop-grid.html">Top 20</a></li>
+            <li><a href="shop-grid.html">TV Televisions</a></li>
+            <li><a href="shop-grid.html">Spkears</a></li>
+            <li><a href="shop-grid.html">Air Conditions</a></li>
+            <li><a href="shop-grid.html">Cameras & Videos</a></li>
+            <li><a href="shop-grid.html">View All</a></li>
+          </ul>
+        </div>
+        <div class="ps-section__content">
+          <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="5" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="2" data-owl-item-lg="3" data-owl-item-xl="5" data-owl-duration="1000" data-owl-mousedrag="on">
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/11.jpg')}}" alt=""></a>
                             <div class="ps-product__badge">-16%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">ASUS Chromebook Flip – 10.2 Inch</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless</a>
-                                <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">ASUS Chromebook Flip – 10.2 Inch</a>
+                              <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/2.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge hot">hot</div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/2.jpg')}}" alt=""></a>
+                            <div class="ps-product__badge out-stock">Out Of Stock</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Xbox One Wireless Controller Black Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$101.99</p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$101.99</p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Xbox One Wireless Controller Black Color</a>
-                                <p class="ps-product__price">$101.99</p>
+                              <p class="ps-product__price">$101.99</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/3.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/3.jpg')}}" alt=""></a>
                             <div class="ps-product__badge">-25%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Sound Intone I65 Earphone White Version</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Sound Intone I65 Earphone White Version</a>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                              <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/4.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/4.jpg')}}" alt=""></a>
+                            <div class="ps-product__badge out-stock">Out Of Stock</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Samsung Gear VR Virtual Reality Headset</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$320.00</p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$320.00</p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Samsung Gear VR Virtual Reality Headset</a>
-                                <p class="ps-product__price">$320.00</p>
+                              <p class="ps-product__price">$320.00</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/5.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('img/products/electronic/5.jpg')}}" alt=""></a>
+                            <div class="ps-product__badge">20%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Samsung UHD TV 24inch</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$85.00</p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$342.00 <del>$460.00 </del></p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Samsung UHD TV 24inch</a>
-                                <p class="ps-product__price">$85.00</p>
+                              <p class="ps-product__price">$342.00 <del>$460.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/6.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('img/products/electronic/6.jpg')}}" alt=""></a>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Store</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Store</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">EPSION Plaster Printer</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$92.00</p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$92.00</p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">EPSION Plaster Printer</a>
-                                <p class="ps-product__price">$92.00</p>
+                              <p class="ps-product__price">$92.00</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/7.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('img/products/electronic/7.jpg')}}" alt=""></a>
                             <div class="ps-product__badge">-46%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">LG White Front Load Steam Washer</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">LG White Front Load Steam Washer</a>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                              <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/8.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('img/products/electronic/8.jpg')}}" alt=""></a>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Edifier Powered Bookshelf Speakers</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price">$42.00</p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price">$42.00</p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Edifier Powered Bookshelf Speakers</a>
-                                <p class="ps-product__price">$42.00</p>
+                              <p class="ps-product__price">$42.00</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/electronic/9.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('img/products/electronic/9.jpg')}}" alt=""></a>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price">$42.00</p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price">$42.00</p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
-                                <p class="ps-product__price">$42.00</p>
+                              <p class="ps-product__price">$42.00</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/10.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('img/products/electronic/10.jpg')}}" alt=""></a>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price">$42.00</p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price">$42.00</p>
                             </div>
                             <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
-                                <p class="ps-product__price">$42.00</p>
+                              <p class="ps-product__price">$42.00</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="ps-product-list ps-clothings">
-        <div class="ps-container">
-            <div class="ps-section__header">
-                <h3>Apparels & Clothings</h3>
-                <ul class="ps-section__links">
-                    <li><a href="shop-grid.html">New Arrivals</a></li>
-                    <li><a href="shop-grid.html">Best seller</a></li>
-                    <li><a href="shop-grid.html">Must Popular</a></li>
-                    <li><a href="shop-grid.html">View All</a></li>
-                </ul>
-            </div>
-            <div class="ps-section__content">
-                <div class="ps-carousel--responsive owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="false" data-owl-dots="true" data-owl-item="7" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="2" data-owl-item-lg="4" data-owl-item-xl="6" data-owl-duration="1000" data-owl-mousedrag="on">
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/clothing/1.jpg') }}" alt=""></a>
+    <div class="ps-promotions">
+      <div class="container">
+        <div class="ps-collection"><img src="img/promotions/home-7/3.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="ps-product-list ps-product-list--2">
+      <div class="container">
+        <div class="ps-section__header">
+          <h3>Home Electronics</h3>
+          <ul class="ps-section__links">
+            <li><a href="shop-grid.html">Smart</a></li>
+            <li><a href="shop-grid.html">TV LED</a></li>
+            <li><a href="shop-grid.html">TVs</a></li>
+            <li><a href="shop-grid.html">Air Conditions</a></li>
+            <li><a href="shop-grid.html">Sony Speakers</a></li>
+            <li><a href="shop-grid.html">Panasonic Refrigerators</a></li>
+          </ul>
+        </div>
+        <div class="ps-section__content">
+          <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="5" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="2" data-owl-item-lg="3" data-owl-item-xl="5" data-owl-duration="1000" data-owl-mousedrag="on">
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/12.jpg')}}" alt=""></a>
                             <div class="ps-product__badge">-16%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Herschel Leather Duffle Bag In Brown Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">TCL 47-inch 4K Ultra HD Smart TV</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Herschel Leather Duffle Bag In Brown Color</a>
-                                <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">TCL 47-inch 4K Ultra HD Smart TV</a>
+                              <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/clothing/2.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/12.jpg')}}" alt=""></a>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Unero Military Classical Backpack</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$101.99</p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Samsung 65-Inch 4K Ultra HD Smart LED TVr</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$1600.99</p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Unero Military Classical Backpack</a>
-                                <p class="ps-product__price">$101.99</p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Samsung 65-Inch 4K Ultra HD Smart LED TVr</a>
+                              <p class="ps-product__price">$1600.99</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/clothing/3.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge">-25%</div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/7.jpg" alt=""></a>
+                            <div class="ps-product__badge">-5%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Rayban Rounded Sunglass Brown Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">LG Electrolux 500L Inverte Washing Machine</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price sale">$342.00 <del>$360.00 </del></p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Rayban Rounded Sunglass Brown Color</a>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">LG Electrolux 500L Inverte Washing Machine</a>
+                              <p class="ps-product__price sale">$342.00 <del>$360.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/clothing/4.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/15.jpg" alt=""></a>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Sleeve Linen Blend Caro Pane Shirt</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$320.00</p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Panasonic Invertr 900L Refrigerator</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$720.00</p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Sleeve Linen Blend Caro Pane Shirt</a>
-                                <p class="ps-product__price">$320.00</p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Panasonic Invertr 900L Refrigerator</a>
+                              <p class="ps-product__price">$720.00</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/clothing/5.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/5.jpg" alt=""></a>
+                            <div class="ps-product__badge">20%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Men’s Sports Runnning Swim Board Shorts</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$85.00</p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Samsung UHD TV 24inch</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price sale">$342.00 <del>$460.00 </del></p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Men’s Sports Runnning Swim Board Shorts</a>
-                                <p class="ps-product__price">$85.00</p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Samsung UHD TV 24inch</a>
+                              <p class="ps-product__price sale">$342.00 <del>$460.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/clothing/6.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/6.jpg" alt=""></a>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Store</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Paul’s Smith Sneaker InWhite Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$92.00</p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Store</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">EPSION Plaster Printer</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$92.00</p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Paul’s Smith Sneaker InWhite Color</a>
-                                <p class="ps-product__price">$92.00</p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">EPSION Plaster Printer</a>
+                              <p class="ps-product__price">$92.00</p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/clothing/7.jpg') }}" alt=""></a>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/7.jpg" alt=""></a>
                             <div class="ps-product__badge">-46%</div>
                             <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">MVMTH Classical Leather Watch In Black</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">LG White Front Load Steam Washer</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">MVMTH Classical Leather Watch In Black</a>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">LG White Front Load Steam Washer</a>
+                              <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/8.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Edifier Powered Bookshelf Speakers</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price">$42.00</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Edifier Powered Bookshelf Speakers</a>
+                              <p class="ps-product__price">$42.00</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/9.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price">$42.00</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                              <p class="ps-product__price">$42.00</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/10.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price">$42.00</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                              <p class="ps-product__price">$42.00</p>
+                            </div>
+                          </div>
+                        </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="ps-product-list ps-garden-kitchen">
-        <div class="ps-container">
-            <div class="ps-section__header">
-                <h3>Home, Garden & Kitchen</h3>
-                <ul class="ps-section__links">
-                    <li><a href="shop-grid.html">New Arrivals</a></li>
-                    <li><a href="shop-grid.html">Best seller</a></li>
-                    <li><a href="shop-grid.html">Must Popular</a></li>
-                    <li><a href="shop-grid.html">View All</a></li>
-                </ul>
-            </div>
-            <div class="ps-section__content">
-                <div class="ps-carousel--responsive owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="false" data-owl-dots="true" data-owl-item="7" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-item-xl="6" data-owl-duration="1000" data-owl-mousedrag="on">
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/1.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge">-16%</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Korea Long Sofa Fabric In Blue Navy Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
-                            </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Korea Long Sofa Fabric In Blue Navy Color</a>
-                                <p class="ps-product__price sale">$567.99 <del>$670.00 </del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/2.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Aroma Rice Cooker</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$101.99</p>
-                            </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Aroma Rice Cooker</a>
-                                <p class="ps-product__price">$101.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/3.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge">-25%</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Simple Plastice Chair In White Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
-                            </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Simple Plastice Chair In White Color</a>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/4.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Korea Fabric Chair In Brown Colorr</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$320.00</p>
-                            </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Korea Fabric Chair In Brown Colorr</a>
-                                <p class="ps-product__price">$320.00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/5.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Set 14-Piece Knife From KichiKit</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$85.00</p>
-                            </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Set 14-Piece Knife From KichiKit</a>
-                                <p class="ps-product__price">$85.00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/6.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge out-stock">Out Of Stock</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Store</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Magic Bullet NutriBullet Pro 900 Series Blender</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$92.00</p>
-                            </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Magic Bullet NutriBullet Pro 900 Series Blender</a>
-                                <p class="ps-product__price">$92.00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ps-product">
-                        <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/home/7.jpg') }}" alt=""></a>
-                            <div class="ps-product__badge">-46%</div>
-                            <ul class="ps-product__actions">
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Letter Printed Cushion Cover Cotton</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
-                            </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Letter Printed Cushion Cover Cotton</a>
-                                <p class="ps-product__price sale">$42.00 <del>$60.00 </del></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="ps-product-list ps-product-list--2">
+      <div class="container">
+        <div class="ps-section__header">
+          <h3>Computers & Technology</h3>
+          <ul class="ps-section__links">
+            <li><a href="shop-grid.html">Laptop</a></li>
+            <li><a href="shop-grid.html">Desktop PC</a></li>
+            <li><a href="shop-grid.html">Smartphone</a></li>
+            <li><a href="shop-grid.html">Mainboards</a></li>
+            <li><a href="shop-grid.html">PC Gaming</a></li>
+            <li><a href="shop-grid.html">Accessories</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="ps-home-ads">
-        <div class="ps-container">
-            <div class="row">
-                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 "><a class="ps-collection" href="#"><img src="{{asset('front_end/img/collection/home-1/ad-1.jpg') }}" alt=""></a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 "><a class="ps-collection" href="#"><img src="{{asset('front_end/img/collection/home-1/ad-2.jpg') }}" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ps-download-app">
-        <div class="ps-container">
-            <div class="ps-block--download-app">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                            <div class="ps-block__thumbnail"><img src="img/app.png" alt=""></div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                            <div class="ps-block__content">
-                                <h3>Download Martfury App Now!</h3>
-                                <p>Shopping fastly and easily more with our app. Get a link to download the app on your phone</p>
-                                <form class="ps-form--download-app" action="do_action" method="post">
-                                    <div class="form-group--nest">
-                                        <input class="form-control" type="Email" placeholder="Email Address">
-                                        <button class="ps-btn">Subscribe</button>
-                                    </div>
-                                </form>
-                                <p class="download-link"><a href="#"><img src="{{asset('front_end/img/google-play.png') }}" alt=""></a><a href="#"><img src="{{asset('front_end/img/app-store.png') }}" alt=""></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ps-product-list ps-new-arrivals">
-        <div class="ps-container">
-            <div class="ps-section__header">
-                <h3>Hot New Arrivals</h3>
-                <ul class="ps-section__links">
-                    <li><a href="shop-grid.html">Technologies</a></li>
-                    <li><a href="shop-grid.html">Electronic</a></li>
-                    <li><a href="shop-grid.html">Furnitures</a></li>
-                    <li><a href="shop-grid.html">Clothing & Apparel</a></li>
-                    <li><a href="shop-grid.html">Health & Beauty</a></li>
-                    <li><a href="shop-grid.html">View All</a></li>
-                </ul>
-            </div>
-            <div class="ps-section__content">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/1.jpg') }}" alt=""></a></div>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 32GB</a>
-                                <p class="ps-product__price">$990.50</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/1.jpg') }}" alt=""></a></div>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                <p class="ps-product__price">$1120.50</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/1.jpg') }}" alt=""></a></div>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 128GB</a>
-                                <p class="ps-product__price">$1220.50</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/2.jpg') }}" alt=""></a></div>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless Speaker</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price">$36.78 – $56.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/3.jpg') }}" alt=""></a></div>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Herschel Leather Duffle Bag In Brown Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price">$125.30</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/4.jpg') }}" alt=""></a></div>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Xbox One Wireless Controller Black Color</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price">$55.30</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/5.jpg') }}" alt=""></a></div>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Grand Slam Indoor Of Show Jumping Novel</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>02</span>
-                                </div>
-                                <p class="ps-product__price sale">$41.27 <del>$52.99 </del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 ">
-                        <div class="ps-product--horizontal">
-                            <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{asset('front_end/img/products/arrivals/6.jpg') }}" alt=""></a></div>
+        <div class="ps-section__content">
+          <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="false" data-owl-dots="true" data-owl-item="5" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="2" data-owl-item-lg="3" data-owl-item-xl="5" data-owl-duration="1000" data-owl-mousedrag="on">
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/3.jpg')}}" alt=""></a>
+                            <div class="ps-product__badge">-5%</div>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
                             <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Sound Intone I65 Earphone White Version</a>
-                                <div class="ps-product__rating">
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><span>01</span>
-                                </div>
-                                <p class="ps-product__price sale">$41.27 <del>$62.39 </del></p>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price sale">$100.99 <del>$105.00 </del></p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ps-newsletter">
-        <div class="ps-container">
-            <form class="ps-form--newsletter" action="do_action" method="post">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                        <div class="ps-form__left">
-                            <h3>Newsletter</h3>
-                            <p>Subcribe to get information about products and coupons</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                        <div class="ps-form__right">
-                            <div class="form-group--nest">
-                                <input class="form-control" type="email" placeholder="Email address">
-                                <button class="ps-btn">Subscribe</button>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Sound Intone I65 Earphone White Version</a>
+                              <p class="ps-product__price sale">$100.99 <del>$105.00 </del></p>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-            </form>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/11.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">ASUS Chromebook Flip – 10.2 Inch</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$322.38</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">ASUS Chromebook Flip – 10.2 Inch</a>
+                              <p class="ps-product__price">$322.38</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/13.jpg" alt=""></a>
+                            <div class="ps-product__badge">-24%</div>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple Macbook Retina Display 12”</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price sale">$625.00 <del>$760.00 </del></p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple Macbook Retina Display 12”</a>
+                              <p class="ps-product__price sale">$625.00 <del>$760.00 </del></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/4.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Samsung Gear VR Virtual Reality Headset</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$64.00</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Samsung Gear VR Virtual Reality Headset</a>
+                              <p class="ps-product__price">$64.00</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/16.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$999.59</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
+                              <p class="ps-product__price">$999.59</p>
+                            </div>
+                          </div>
+                        </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+    <div class="ps-product-list ps-product-list--2">
+      <div class="container">
+        <div class="ps-section__header">
+          <h3>Cameras & Videos</h3>
+          <ul class="ps-section__links">
+            <li><a href="shop-grid.html">Videos</a></li>
+            <li><a href="shop-grid.html">Projectors</a></li>
+            <li><a href="shop-grid.html">Digital Cameras</a></li>
+            <li><a href="shop-grid.html">Printers & Scanners</a></li>
+            <li><a href="shop-grid.html">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="ps-section__content">
+          <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="5" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="2" data-owl-item-lg="3" data-owl-item-xl="5" data-owl-duration="1000" data-owl-mousedrag="on">
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('front_end/img/products/electronic/18.jpg')}}" alt=""></a>
+                            <div class="ps-product__badge">-5%</div>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Gopro Hero 4 Sliver Wireless, 4k HD</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price sale">$500.99 <del>$510.00 </del></p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Gopro Hero 4 Sliver Wireless, 4k HD</a>
+                              <p class="ps-product__price sale">$500.99 <del>$510.00 </del></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/19.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Nikon Coolpix 24 Megapixel Camera</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$393.38</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Nikon Coolpix 24 Megapixel Camera</a>
+                              <p class="ps-product__price">$393.38</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/20.jpg" alt=""></a>
+                            <div class="ps-product__badge">-24%</div>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Sony HD 1080, 13.5MP, White Version</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>02</span>
+                              </div>
+                              <p class="ps-product__price sale">$625.00 <del>$760.00 </del></p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Sony HD 1080, 13.5MP, White Version</a>
+                              <p class="ps-product__price sale">$625.00 <del>$760.00 </del></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/17.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Beat Spill 2.0 Wireless Speaker – White</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$64.00</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Beat Spill 2.0 Wireless Speaker – White</a>
+                              <p class="ps-product__price">$64.00</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/9.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$807.59</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Amcrest Security Camera in White Color</a>
+                              <p class="ps-product__price">$807.59</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-product">
+                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/10.jpg" alt=""></a>
+                            <ul class="ps-product__actions">
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                              <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                            </ul>
+                          </div>
+                          <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">DJI Phantom 4 Quadcopter Camera, White</a>
+                              <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                              <option value="1">1</option>
+                                              <option value="1">2</option>
+                                              <option value="1">3</option>
+                                              <option value="1">4</option>
+                                              <option value="2">5</option>
+                                            </select><span>01</span>
+                              </div>
+                              <p class="ps-product__price">$999.59</p>
+                            </div>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">DJI Phantom 4 Quadcopter Camera, White</a>
+                              <p class="ps-product__price">$999.59</p>
+                            </div>
+                          </div>
+                        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ps-section--default ps-home-blog">
+      <div class="container">
+        <div class="ps-section__header">
+          <h3>News</h3>
+          <ul class="ps-section__links">
+            <li><a href="#">News</a></li>
+            <li><a href="#">Review Products</a></li>
+            <li><a href="#">Tips & Tricks</a></li>
+            <li><a href="#">Promotions</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">See All</a></li>
+          </ul>
+        </div>
+        <div class="ps-section__content">
+          <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+                          <div class="ps-post">
+                            <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="blog-detail.html"></a><img src="{{ asset('front_end/img/blog/grid/1.jpg')}}" alt=""></div>
+                            <div class="ps-post__content"><a class="ps-post__meta" href="#">Tips & Tricks</a><a class="ps-post__title" href="#">How To Make A Fresh Juice Blended For Your Family?</a>
+                              <p>December 17, 2017 by<a href="#"> drfurion</a></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+                          <div class="ps-post">
+                            <div class="ps-post__thumbnail">
+                              <div class="ps-post__badge"><i class="icon-volume-high"></i></div><a class="ps-post__overlay" href="blog-detail.html"></a><img src="{{ asset('front_end/img/blog/grid/2.jpg')}}" alt="">
+                            </div>
+                            <div class="ps-post__content"><a class="ps-post__meta" href="#">Review Product</a><a class="ps-post__title" href="#">Fresh Eggs From Caroline’s Farm</a>
+                              <p>December 17, 2017 by<a href="#"> drfurion</a></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+                          <div class="ps-post">
+                            <div class="ps-post__thumbnail">
+                              <div class="ps-post__badge"><i class="icon-volume-high"></i></div>
+                              <div class="ps-post__badge"><i class="icon-volume-high"></i></div><a class="ps-post__overlay" href="blog-detail.html"></a><img src="{{ asset('front_end/img/blog/grid/3.jpg')}}" alt="">
+                            </div>
+                            <div class="ps-post__content"><a class="ps-post__meta" href="#">News</a><a class="ps-post__title" href="#">Discover Fresh Organic Farms In Switzeland Villages</a>
+                              <p>December 17, 2017 by<a href="#"> drfurion</a></p>
+                            </div>
+                          </div>
+                        </div>
+          </div>
+        </div>
+        <div class="ps-block--recent-viewed">
+          <div class="ps-block__header">
+            <h3>Recently Viewed Products</h3><a href="shop-default.html">View All</a>
+          </div>
+          
+          <div class="ps-block__content">
+              <a href="#"><img src="{{ asset('front_end/img/products/home-3/healthy/1.jpg')}}" alt=""></a>
+              <a href="#"><img src="{{ asset('front_end/img/products/home-3/technology/2.jpg')}}" alt=""></a>
+              <a href="#"><img src="{{ asset('front_end/img/products/home-3/healthy/3.jpg')}}" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection

@@ -23,10 +23,11 @@
     <link rel="stylesheet" href="{{asset('front_end/plugins/select2/dist/css/select2.min.css') }}">
     {{-- <link rel="stylesheet" href="css/style.css"> --}}
     <link rel="stylesheet" href="{{asset('front_end/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('front_end/css/electronic.css')}}">
 </head>
 
 <body>
-    @include('frontend\home\page\header');
+    @include('frontend.home.page.header')
     <div class="ps-panel--sidebar" id="cart-mobile">
         <div class="ps-panel__header">
             <h3>Shopping Cart</h3>
@@ -339,10 +340,11 @@
             </ul>
         </div>
     </div>
-       @yield('maincontent');
-       @include('frontend\home\page\footer');
+    
+       @yield('maincontent')
+       @include('frontend.home.page.footer')
 
-    <div class="ps-popup" id="subscribe" data-time="500">
+    {{-- <div class="ps-popup" id="subscribe" data-time="500">
         <div class="ps-popup__content bg--cover" data-background="img/bg/subscribe.jpg"><a class="ps-popup__close" href="#"><i class="icon-cross"></i></a>
             <form class="ps-form--subscribe-popup" action="index.html" method="get">
                 <div class="ps-form__content">
@@ -359,7 +361,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> --}}
     <div id="back2top"><i class="pe-7s-angle-up"></i></div>
     <div class="ps-site-overlay"></div>
     <div id="loader-wrapper">
