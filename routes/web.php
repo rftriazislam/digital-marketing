@@ -26,3 +26,5 @@ Route::get('/signup ','FrontendController@signup');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/customer', 'CustomerController@index')->name('customer');
+

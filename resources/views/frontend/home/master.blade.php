@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>Unistag Digital Platfrom</title>
+    <title>Unistag Digital|Home </title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('front_end/plugins/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{asset('front_end/fonts/Linearicons/Linearicons/Font/demo-files/demo.css') }}">
@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{asset('front_end/plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css') }}">
     <link rel="stylesheet" href="{{asset('front_end/plugins/jquery-ui/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{asset('front_end/plugins/select2/dist/css/select2.min.css') }}">
+    <script src="{{asset('front_end/js/country_list/countries.js')}}"></script>
+
     {{-- <link rel="stylesheet" href="css/style.css"> --}}
     <link rel="stylesheet" href="{{asset('front_end/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('front_end/css/electronic.css')}}">

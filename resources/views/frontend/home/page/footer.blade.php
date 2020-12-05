@@ -59,7 +59,7 @@
         </p>
       </div>
       <div class="ps-footer__copyright">
-        <p>© 2018 Martfury. All Rights Reserved</p>
+        <p>© 2020 <a href="www.codewin.xyz"><b>Codewin</b></a>. All Rights Reserved</p>
         <p><span>We Using Safe Payment For:</span>
             <a href="#"><img src="{{ asset('front_end/img/payment-method/1.jpg') }}" alt=""></a>
             <a href="#"><img src="{{ asset('front_end/img/payment-method/2.jpg') }}" alt=""></a>

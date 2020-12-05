@@ -103,22 +103,30 @@
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
+
+                
                   <div class="ps-form__content">
                     <h5>Register An Account</h5>
                     <div class="form-group">
-                        <input id="country" name="country"class="form-control @error('country') is-invalid @enderror" value="{{ old('country') }}" required autocomplete="country" autofocus  type="text"placeholder="country">
-                        @error('country')
+                        <select id="country" name="country" class="form-control @error('country') is-invalid @enderror" value="{{ old('country') }}" required autocomplete="country" autofocus  type="text" placeholder="country">
+                   
+                        </select>
+                    
+                    
+                        {{-- @error('country')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
-                    @enderror
+                         @enderror --}}
                     </div>
                     <div class="form-group">
-                        <input class="form-control" required type="text" name="state_division"placeholder="State/Division">
+                      <select id="state" name="state_division"class="form-control @error('state') is-invalid @enderror" value="{{ old('state') }}" required autocomplete="country" autofocus  type="text" placeholder="country">
+                   <option>Select State/Division</option>
+                      </select>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <input class="form-control" required type="text" name="distrct" placeholder="Distrct">
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <input id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus required type="text" name="name" placeholder="Name">
                         @error('name')
@@ -139,6 +147,14 @@
                     <div class="form-group">
                         <input  id="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" type="phone" required  placeholder="Phone">
                         @error('phone')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                       @enderror
+                      </div>
+                      <div class="form-group">
+                        <textarea  id="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="address"  required  ></textarea>
+                        @error('address')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -166,6 +182,12 @@
                   </div>
                 </form>
                
+                <script language="javascript">
+
+                  populateCountries("country", "state");
+            
+                
+                </script>
               </div>
             </div>
           </div>

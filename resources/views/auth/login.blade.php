@@ -98,15 +98,34 @@
            
               <div class="ps-tabs">
                 <div class="ps-tab active" id="sign-in">
-                    <form  action="link.html" method="get">
+                  <form method="POST" action="{{ route('login') }}">
+                    @csrf
+
                   <div class="ps-form__content">
                     <h5>Log In Your Account</h5>
+                    
                     <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Username or email address">
+                      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Username or email address">
+                 
+                      @error('email')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
                     </div>
+                    
                     <div class="form-group form-forgot">
-                      <input class="form-control" type="text" placeholder="Password"><a href="">Forgot?</a>
+                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+                      
+                      @error('password')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+                      <a href="">Forgot?</a>
                     </div>
+                    
+                   
                     <div class="form-group">
                                   <div class="ps-checkbox">
                                     <input class="form-control" type="checkbox" id="remember-me" name="remember-me">

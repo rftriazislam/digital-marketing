@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Http\Request;
+use Auth;
 class LoginController extends Controller
 {
     /*
@@ -37,4 +38,32 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function logout( Request $request ) {
+        Auth::logout();
+        return redirect( '/login' );
+    }
+
+    public function redirectTo() {
+
+        if (Auth::check() && Auth::user()->role == 'user') {
+            return ('/');
+        }
+       
+        else if(Auth::check() && Auth::user()->role == 'admin') {
+            return ('/admin');
+        }
+        else if(Auth::check() && Auth::user()->role == 'customer') {
+            return ('/customer');
+        }
+        else{
+            return ('/');
+        }
+
+
+    }
+
+
+
+
 }

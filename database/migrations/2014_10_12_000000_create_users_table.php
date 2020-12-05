@@ -21,9 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->string('country');
             $table->string('state_division');
-            $table->string('district');
+      
             $table->text('address');
-            $table->string('user_refer_id');
+            $table->string('user_refer_id')->nullable();
             $table->string('refer_id')->nullable();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
