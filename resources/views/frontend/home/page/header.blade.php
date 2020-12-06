@@ -166,7 +166,7 @@
             </div>
             <div class="ps-block--user-header">
               <div class="ps-block__left"><i class="icon-user"></i></div>
-              <div class="ps-block__right"><a href="{{route('login')}}">Login</a><a href="my-account.html">Signup</a></div>
+              <div class="ps-block__right"><a href="{{route('login')}}">Login</a></div>
             </div>
           </div>
         </div>
@@ -176,16 +176,17 @@
     <nav class="navigation">
       <div class="container">
                     <ul class="menu menu--electronic">
-                      <li><a href="homepage-4.html"><i class="icon-star"></i> Hot Deal</a>
+                      <li><a href="{{route('category')}}"><i class="icon-star"></i>Category</a>
                       </li>
-                      <li><a href="homepage-4.html"><i class="icon-laundry"></i> Home Electronics</a>
+                      <li><a href="{{route('subcategory')}}"><i class="icon-surveillance"></i>Subcategory</a>
+                      </li>
+                      <li><a href="{{route('product')}}"><i class="icon-laundry"></i> Product</a>
                       </li>
                       <li><a href="homepage-4.html"><i class="icon-laptop"></i> Computer &amp; Technology</a>
                       </li>
                       <li><a href="homepage-4.html"><i class="icon-camera2"></i> Camera &amp; Videos</a>
                       </li>
-                      <li><a href="homepage-4.html"><i class="icon-surveillance"></i> Office Electronics</a>
-                      </li>
+                     
                     </ul>
       </div>
     </nav>
@@ -219,7 +220,7 @@
       </div>
     </div>
     <div class="navigation--mobile">
-      <div class="navigation__left"><a class="ps-logo" href="index.html"><img src="{{ asset('front_end/img/logo-electronic.png') }}" alt=""></a></div>
+      <div class="navigation__left"><a class="ps-logo" href="index.html"><img style="width:152px;height:44px;" src="{{ asset('front_end/img/logo-electronic.png') }}" alt=""></a></div>
       <div class="navigation__right">
         <div class="header__actions">
           <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>

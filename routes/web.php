@@ -26,5 +26,24 @@ Route::get('/signup ','FrontendController@signup');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/customer', 'CustomerController@index')->name('customer');
 
+Route::get('/category', 'FrontendController@category')->name('category');
+Route::get('/sub-category', 'FrontendController@subcategory')->name('subcategory');
+
+Route::get('/product', 'FrontendController@product')->name('product');
+
+
+Route::group(['middleware' => ['auth', 'admin'],], function () {
+
+    Route::get('/admin', 'AdminController@index')->name('admin');
+
+
+
+});
+
+Route::group(['middleware' => ['auth', 'customer'],], function () {
+
+    Route::get('/customer', 'CustomerController@index')->name('customer');
+
+
+});

@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
-
+use Auth;
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -21,11 +21,12 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME ='/';
+  
 
     /**
      * Define your route model bindings, pattern filters, etc.
-     *
+     *                                                                                                                          
      * @return void
      */
     public function boot()
