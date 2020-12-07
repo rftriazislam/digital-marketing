@@ -1,0 +1,16 @@
+//frontend
+@extends('frontend.home.master')
+@section('maincontent')
+
+
+@endsection
+
+
+
+//admin
+@extends('admin.dashboard')
+@section('maincontent')
+
+
+@endsection
+
