@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="{{ asset('back_end/plugins/summernote/summernote-bs4.min.css')}}">
     <link rel="stylesheet" href="{{ asset('back_end/plugins/apexcharts-bundle/dist/apexcharts.css')}}">
     <link rel="stylesheet" href="{{ asset('back_end/css/style.css')}}">
+  
+    <script src=www.codermen.com/js/jquery.js></script>
 </head>
 
 <body>
@@ -71,7 +73,7 @@
                             <li><a class="active" href="index.html"><i class="icon-home"></i>Dashboard</a></li>
                      
 
-                            <li><a href="products.html"><i class="icon-database"></i>Products</a></li>
+                            <li><a href="{{ route('customer.product') }}"><i class="icon-database"></i>Products</a></li>
                             <li><a href="orders.html"><i class="icon-bag2"></i>Orders</a></li>
                             <li><a href="customers.html"><i class="icon-users2"></i>Customers</a></li>
                             <li><a href="coupons.html"><i class="icon-percent-circle"></i>Coupons</a></li>
@@ -80,7 +82,7 @@
                     </div>
                     <div class="ps-sidebar__footer">
                         <div class="ps-copyright"><img src="img/logo.png" alt="">
-                            <p>&copy;2020 Marfury marketplace. <br/> All rights reversed.</p>
+                            <p>&copy;2020 <a href="www.codewin.com"><b>Codewin</b></a>. <br/> All rights reversed.</p>
                         </div>
                     </div>
                 </div>
@@ -114,6 +116,7 @@
     <script src="{{ asset('back_end/js/chart.js') }}"></script>
     <!-- custom code-->
     <script src="{{ asset('back_end/js/main.js') }}"></script>
+    <script src=www.codermen.com/js/jquery.js></script>
 </body>
 
 </html>

@@ -14,3 +14,10 @@
 
 @endsection
 
+//customer
+
+@extends('customer.dashboard')
+@section('maincontent')
+
+
+@endsection

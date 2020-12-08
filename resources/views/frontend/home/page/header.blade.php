@@ -30,7 +30,7 @@
     </div>
     <div class="header__content">
       <div class="container">
-        <div class="header__content-left"><a class="ps-logo" href="index.html"><img src="{{ asset('front_end/img/logo-electronic.png') }}" alt="Unistag Digital"></a>
+        <div class="header__content-left"><a class="ps-logo" href="index.html"><img src="{{ asset('front_end/logo/D-1.png') }}" alt="Unistag Digital"></a>
           <div class="menu--product-categories">
             <div class="menu__toggle"><i class="icon-menu"></i><span> Shop by Department</span></div>
             <div class="menu__content">
@@ -220,7 +220,7 @@
       </div>
     </div>
     <div class="navigation--mobile">
-      <div class="navigation__left"><a class="ps-logo" href="index.html"><img style="width:152px;height:44px;" src="{{ asset('front_end/img/logo-electronic.png') }}" alt=""></a></div>
+      <div class="navigation__left"><a class="ps-logo" href="index.html"><img style="width:152px;height:44px;" src="{{ asset('front_end/logo/UDM-3.png') }}" alt=""></a></div>
       <div class="navigation__right">
         <div class="header__actions">
           <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>

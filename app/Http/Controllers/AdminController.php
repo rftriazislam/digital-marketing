@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
-use App\category;
+use App\Category;
 use App\Subcategory;
 use Image;
 class AdminController extends Controller

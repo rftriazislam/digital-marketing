@@ -59,10 +59,13 @@ Route::group(['middleware' => ['auth', 'admin'],], function () {
 });
 
 Route::group(['middleware' => ['auth', 'customer'],], function () {
-
+    
     Route::get('/customer', 'CustomerController@index')->name('customer');
+    Route::get('/customer-product', 'CustomerController@product')->name('customer.product');
+    Route::get('/customer-add-product', 'CustomerController@addproduct')->name('customer.addproduct');
+    Route::get('/get-subcategory-list', 'CustomerController@getsubcategory')->name('getsubcategory');
 
-  
+    
 
 
 
