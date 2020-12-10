@@ -1,4 +1,7 @@
 @extends('customer.dashboard')
+@section('title')
+Unistag Digital||Admin
+@endsection
 @section('maincontent')
 
     <section class="ps-dashboard">

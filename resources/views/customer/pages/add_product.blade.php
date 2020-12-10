@@ -100,8 +100,10 @@
 
 
     $('#idcategory').change(function(){
+
     var category_id = $(this).val();  
     
+   
     if(category_id){
       $.ajax({
         type:"GET",

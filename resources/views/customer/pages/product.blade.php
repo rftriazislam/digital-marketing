@@ -1,5 +1,8 @@
 
 @extends('customer.dashboard')
+@section('title')
+Unistag Digital||Product
+@endsection
 @section('maincontent')
 
 <section class="ps-items-listing">

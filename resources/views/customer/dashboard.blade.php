@@ -12,7 +12,9 @@
     <meta name="description" content="">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="favicon.png" rel="icon">
-    <title>Unistag Digital||Admin</title>
+
+    <title>@yield('title')</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('back_end/plugins/font-awesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('back_end/fonts/Linearicons/Font/demo-files/demo.css')}}">
@@ -74,9 +76,11 @@
                      
 
                             <li><a href="{{ route('customer.product') }}"><i class="icon-database"></i>Products</a></li>
+                            <li><a href="{{ route('customer.product') }}"><i class="icon-database"></i>Balance</a></li>
                             <li><a href="orders.html"><i class="icon-bag2"></i>Orders</a></li>
-                            <li><a href="customers.html"><i class="icon-users2"></i>Customers</a></li>
-                            <li><a href="coupons.html"><i class="icon-percent-circle"></i>Coupons</a></li>
+                            <li><a href="customers.html"><i class="icon-users2"></i>Withdraw</a></li>
+                            <li><a href="coupons.html"><i class="icon-percent-circle"></i>Affiliate Link</a></li>
+                            <li><a href="customers.html"><i class="icon-users2"></i>Promotional materials</a></li>
                             <li><a href="settings.html"><i class="icon-cog"></i>Settings</a></li>
                         </ul>
                     </div>
