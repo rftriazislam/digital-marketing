@@ -17,7 +17,7 @@
               </div>
             </li>
             <li>
-              <div class="ps-dropdown language"><a href="#"><img src="{{ asset('front_end/img/flag/en.png') }}" alt="">English</a>
+              <div class="ps-dropdown language"><a href="#"><img src="{{ asset('front_end/img/flag/en.png') }}" alt=""> English</a>
                 <ul class="ps-dropdown-menu">
                   <li><a href="#"><img src="{{ asset('front_end/img/flag/germany.png') }}" alt=""> Germany</a></li>
                   <li><a href="#"><img src="{{ asset('front_end/img/flag/fr.png') }}" alt=""> France</a></li>

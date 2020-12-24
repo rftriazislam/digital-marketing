@@ -6,36 +6,42 @@ Unistag Digital||Product
 @section('maincontent')
 
 <section class="ps-items-listing">
-    <div class="ps-section__actions"><a class="ps-btn success" href="{{ route('customer.addproduct') }}"><i class="icon icon-plus mr-2"></i>New Product</a></div>
+    {{-- <div class="ps-section__actions"><a class="ps-btn success" href="{{ route('customer.addproduct') }}"><i class="icon icon-plus mr-2"></i>New Product</a></div> --}}
     <div class="ps-section__header">
         <div class="ps-section__filter">
-            <form class="ps-form--filter" action="index.html" method="get">
+            <form class="ps-form--filter" action="{{ route('customer.listroduct') }}" method="post">
+             @csrf
                 <div class="ps-form__left">
-                    <div class="form-group">
-                        <select class="ps-select">
-                            <option value="1">Select Category</option>
-                            <option value="2">Clothing & Apparel</option>
-                            <option value="3">Clothing & Apparel</option>
+                   
+                    <div class="form-group row">
+                    
+                        <select   id="idcategory" required class="form-control col-8"  name="category_id" >
+
+                            <option value="" selected disabled>Select</option>
+                                    
+                            @foreach($category as $v_category)
+                            <option value="{{$v_category->id}}">{{$v_category->category_name}}</option>
+                             @endforeach
+
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="ps-select">
-                            <option value="1">Product Type</option>
-                            <option value="2">Simple Product</option>
-                            <option value="3">Groupped product</option>
+                 </div>
+                 
+                    <div class="form-group row">
+                    
+                        <select   id="idsubcategory" class="form-control col-8" required  name="subcategory_id" >
+                          <option value="" selected disabled>Select</option>
                         </select>
-                    </div>
+                      </div>
                     <div class="form-group">
-                        <select class="ps-select">
-                            <option value="1">Status</option>
-                            <option value="2">Active</option>
-                            <option value="3">Inactive</option>
-                        </select>
+                    
+                        <button type="submit" style="background-color: #ffffff;border-width: 0px;"><a class="ps-btn success"  style="padding: 10px 30px;color:white"><i class="icon icon-plus mr-2"></i>Product</a>
+                        </button>
                     </div>
                 </div>
                 <div class="ps-form__right">
-                    <button class="ps-btn ps-btn--gray"><i class="icon icon-funnel mr-2"></i>Filter</button>
                 </div>
+                 
+
             </form>
         </div>
         <div class="ps-section__search">
@@ -184,4 +190,59 @@ Unistag Digital||Product
         </ul>
     </div>
 </section>
+<script type=text/javascript>  
+
+    $('#idcategory').change(function(){
+        console.log("djjdjd");
+    var category_id=$(this).val();
+   
+
+  
+     
+    if(category_id){
+       $("#cols").empty();
+     
+        $("#cols").append(
+          '<li class="nav-item"><a class="nav-link" href="#i'+category_id+'" data-toggle="tab" style="color:white;height:50px;width:100px;text-align:center;background:#24bb2a;">GO</a></li>');
+
+          $("#link").append('<a  href="{{url('get-add-product-list')}}/'+category_id+'"  style="color:white;height:50px;width:100px;text-align:center;background:#24bb2a;">GO</a>');
+          $("#category_id").append('<input type="hidden" class="form-control" name="category_id" value="'+category_id+'" placeholder="category id">');
+          
+         
+    }
+        
+    if(category_id){
+
+      
+
+      $.ajax({
+        type:"GET",
+        url:"{{url('get-subcategory-list')}}?category_id="+category_id,
+        success:function(res){        
+        if(res){
+          $("#idsubcategory").empty();
+
+          $("#idsubcategory").append('<option value="NULL">Select</option>');
+
+          $.each(res,function(key,value){
+
+            $("#idsubcategory").append('<option value="'+key+'">'+value+'</option>');
+            // $("#idsubcateggory").append('<li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab" >'+value+'</a></li>');
+
+          });
+        }else{
+
+          $("#idsubcategory").empty();
+
+        }
+        }
+      });
+    }else{    
+      $("#idsubcategory").empty(); 
+  }  
+  
+
+  });
+
+  </script>
 @endsection

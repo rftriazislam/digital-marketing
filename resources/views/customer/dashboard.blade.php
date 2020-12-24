@@ -12,9 +12,9 @@
     <meta name="description" content="">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="favicon.png" rel="icon">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>@yield('title')</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('back_end/plugins/font-awesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('back_end/fonts/Linearicons/Font/demo-files/demo.css')}}">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ asset('back_end/plugins/apexcharts-bundle/dist/apexcharts.css')}}">
     <link rel="stylesheet" href="{{ asset('back_end/css/style.css')}}">
   
-    <script src=www.codermen.com/js/jquery.js></script>
+    <script src="{{ asset('back_end/js/jqueryy.js')}}"></script>
 </head>
 
 <body>
@@ -120,7 +120,8 @@
     <script src="{{ asset('back_end/js/chart.js') }}"></script>
     <!-- custom code-->
     <script src="{{ asset('back_end/js/main.js') }}"></script>
-    <script src=www.codermen.com/js/jquery.js></script>
+    <script src="{{ asset('back_end/js/jqueryy.js')}}"></script>
+    {{-- <script src="www.codermen.com/js/jquery.js"></script> --}}
 </body>
 
 </html>
