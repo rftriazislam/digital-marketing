@@ -8,16 +8,16 @@
             
             
             <h4 style="text-align:center">send info:</h4>
-            <h4>A/c Type:  </h4> {{ Session::get('send_wallet')}}
-            <h4>Account No:{{ Session::get('send_acount')}}</h4>
+            <h4>A/c Type:  </h4> 
+            <h4>Account No:</h4>
 
             <h4 style="text-align:center">Get info:</h4>
-            <h4>A/c Type:{{ Session::get('get_wallet')}}</h4>
-            <h4>Account No:{{ Session::get('get_account')}}</h4>
+            <h4>A/c Type:</h4>
+            <h4>Account No:</h4>
 
-            <h4>Sell Rate:{{ Session::get('sell_rate')}}</h4>
-            <h4>Purchage Rate:{{ Session::get('purchase_rate')}}</h4>
-            <h4>Your Amount:{{ Session::get('your_amount')}}</h4>
+            <h4>Sell Rate:</h4>
+            <h4>Purchage Rate:</h4>
+            <h4>Your Amount:</h4>
         
                        
             

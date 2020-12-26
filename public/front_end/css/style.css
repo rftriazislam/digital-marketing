@@ -3661,11 +3661,12 @@ textarea.form-control {
 .ps-block--category-2:hover p {
   color: #09c;
 }
-
+ 
 @media (max-width: 1680px) {
   .ps-block--category-2 .ps-block__thumbnail {
     max-width: 100px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
+   
   }
 }
 
@@ -16404,6 +16405,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .navigation--sticky.navigation--unpin {
     transform: translate(0, 0);
   }
+  .img_s{
+    height: 82px;
+  }
 }
 
 .ps-site-overlay {
@@ -16566,6 +16570,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .ps-footer--3 .ps-block--site-features {
     margin-bottom: 40px;
   }
+  
 }
 
 .ps-footer--kids .ps-form--newletter .form-group--nest {

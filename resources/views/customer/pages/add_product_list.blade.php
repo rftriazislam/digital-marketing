@@ -3,72 +3,77 @@
 <section class="ps-new-item">
    
     @if($subcategory->category_info->form_name =='social_media')
-    <form class="ps-form ps-form--new-product" action="index.html" method="get">
+    <form class="ps-form ps-form--new-product" action="{{ route('customer.savesocialmedia') }}" method="post"  enctype="multipart/form-data">
+      @csrf
         <div class="ps-form__content">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <figure class="ps-block--form-box">
-                        <figcaption>New Product</figcaption>
+                        <figcaption>Social Media</figcaption>
                         <div class="ps-block__content">
                            
                             <div class="form-group form-group--select">
                                 <label>Category Name </label>
-                                <input class="form-control" type="text" disabled value=" {{ $subcategory->category_info->category_name }}" placeholder="Enter product name..." />
-                                <input class="form-control" type="hidden" name="product_name" value=" {{ $subcategory->category_info->category_name }}" placeholder="Enter product name..." />
+                                <input class="form-control" type="text"  disabled value=" {{ $subcategory->category_info->category_name }}" placeholder="Enter product name..." />
+                                <input class="form-control" type="hidden" name="category_id" value=" {{ $subcategory->category_info->id }}" placeholder="Enter product name..." />
                                
                             </div>
                             
                             <div class="form-group form-group--select">
                                 <label>SubCategory Name </label>
                                 <input class="form-control" type="text"disabled value=" {{ $subcategory->subcategory_name }}" placeholder="Enter product name..." />
-                                <input class="form-control" type="hidden" name="product_name" value=" {{ $subcategory->subcategory_name }}" placeholder="Enter product name..." />
+                                <input class="form-control" type="hidden" name="subcategory_id" value=" {{ $subcategory->id }}" placeholder="Enter product name..." />
                                
                             </div>
                             <div class="form-group">
-                                <label>Product Name<sup>*</sup>
+                                <label>Social Media Name<sup>*</sup>
                                 </label>
-                                <input class="form-control" type="text" name="product_name" placeholder="Enter product name..." />
+                                <input class="form-control" type="text" required name="social_name" placeholder="Enter Social Media name..." />
                             </div>
                             <div class="form-group">
-                                <label>Sale Price<sup>*</sup>
+                                <label>Social Media Link<sup>*</sup>
                                 </label>
-                                <input class="form-control" name="product_price"type="text" placeholder="" />
+                                <input class="form-control" type="text"required name="social_link" placeholder="Enter Social Media  Link..." />
                             </div>
                             <div class="form-group">
-                                <label>Sale Quantity<sup>*</sup>
+                                <label>Friend Follower<sup>*</sup>
                                 </label>
-                                <input class="form-control" name="qty" type="text" placeholder="" />
+                                <input class="form-control" type="text"required name="friend_follower" placeholder="Enter Friend Follower.." />
                             </div>
-                            
+                           
                             
                         </div>
                     </figure>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <figure class="ps-block--form-box">
-                        <figcaption>Product Images</figcaption>
+                        <figcaption>Social Media</figcaption>
                         <div class="ps-block__content">
                             <div class="form-group">
-                                <label>Product icon/image</label>
+                                <label>Social Media  icon/image</label>
                                 <div class="form-group--nest">
-                                    <input class=" mb-1" type="file"  name="image" placeholder="">
+                                    <input class=" mb-1" type="file" required name="image" placeholder="">
                         
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Product Description<sup>*</sup></label>
-                                <textarea id="summernote" rows="6" name="product_description"></textarea>
+                                <label>Sell Price<sup>$USD</sup>
+                                </label>
+                                <input class="form-control"required name="sell_price"type="text" placeholder="" />
+                            </div>
+        
+                            <div class="form-group">
+                                <label>Description<sup>*</sup></label>
+                                <textarea id="summernote"required rows="6" name="description"></textarea>
                             </div>
                             
                             <div class="form-group form-group--select">
                                 <label>Publication status</label>
                                 <div class="form-group__content">
                                     <select  class="ps-select" title="Parent" name="status">
-                                        <option value="1">Now</option>
+                                        <option value="0">Now</option>
                                         <option value="0" >Later</option>
-                                        
-            
-                                        
+                            
                                     </select>
                                 </div>
                             </div>
@@ -79,13 +84,14 @@
                 </div>
             </div>
         </div>
-        <div class="ps-form__bottom"><a class="ps-btn ps-btn--black" href="{{ route('customer.product') }}">Back</a>
+        <div class="ps-form__bottodm" style="text-align:center;"><a class="ps-btn ps-btn--black" href="{{ route('customer.product') }}">Back</a>
             <button class="ps-btn ps-btn--gray" type="reset">Cancel</button>
             <button class="ps-btn">Submit</button>
         </div>
     </form>
     @elseif($subcategory->category_info->form_name =='make_money')
-    <form class="ps-form ps-form--new-product" action="index.html" method="get">
+    <form class="ps-form ps-form--new-product" action="{{ route('customer.savemakemoney') }}" method="post">
+        @csrf
         <div class="ps-form__content">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -95,14 +101,14 @@
                             <div class="form-group form-group--select">
                                 <label>Category Name </label>
                                 <input class="form-control" type="text" disabled value=" {{ $subcategory->category_info->category_name }}" placeholder="Enter product name..." />
-                                <input class="form-control" type="hidden" name="product_name" value=" {{ $subcategory->category_info->category_name }}" placeholder="Enter product name..." />
+                                <input class="form-control" type="hidden" name="category_id" value=" {{ $subcategory->category_info->id }}" placeholder="Enter product name..." />
                                
                             </div>
                             
                             <div class="form-group form-group--select">
                                 <label>SubCategory Name </label>
                                 <input class="form-control" type="text"disabled value=" {{ $subcategory->subcategory_name }}" placeholder="Enter product name..." />
-                                <input class="form-control" type="hidden" name="product_name" value=" {{ $subcategory->subcategory_name }}" placeholder="Enter product name..." />
+                                <input class="form-control" type="hidden" name="subcategory_id" value=" {{ $subcategory->id }}" placeholder="Enter product name..." />
                                
                             </div>
                             
@@ -112,18 +118,18 @@
                         <figcaption>Send Information</figcaption>
                         <div class="form-group form-group--select">
                             <label>Currency</label>
-                            <input class="form-control" type="number" name="product_name"  placeholder="Enter currency..." />
+                            <input class="form-control" type="number" required name="send_currency"  placeholder="Enter currency..." />
                            
                         </div>
                         
                         <div class="form-group form-group--select">
                             <label>A/C Wallet</label>
-                            <input class="form-control" type="text" name="product_name"  placeholder="Enter Wallet name..." />
+                            <input class="form-control" type="text" required name="send_wallet"  placeholder="Enter Wallet name..." />
                            
                         </div>
                         <div class="form-group form-group--select">
                             <label>Account No.</label>
-                            <input class="form-control" type="text" name="product_name"  placeholder="Enter Account..." />
+                            <input class="form-control" type="text" required name="send_account"  placeholder="Enter Account..." />
                            
                         </div>
                     </figure>
@@ -131,18 +137,18 @@
                         <figcaption>Get Information</figcaption>
                         <div class="form-group form-group--select">
                             <label>Currency</label>
-                            <input class="form-control" type="text" name="product_name"  placeholder="Enter product name..." />
+                            <input class="form-control" type="number" required name="get_currency"  placeholder="Enter Currency..." />
                            
                         </div>
                         
                         <div class="form-group form-group--select">
                             <label>A/C Wallet</label>
-                            <input class="form-control" type="text" name="product_name"  placeholder="Enter product name..." />
+                            <input class="form-control" type="text" required name="get_wallet"  placeholder="Enter Wallet name..." />
                            
                         </div>
                         <div class="form-group form-group--select">
                             <label>Account No.</label>
-                            <input class="form-control" type="text" name="product_name"  placeholder="Enter product name..." />
+                            <input class="form-control" type="text" required name="get_account"  placeholder="Enter Account name..." />
                            
                         </div>
                     </figure>
@@ -154,28 +160,28 @@
                             <div class="form-group">
                                 <label>Sell Rate</label>
                                 <div class="form-group--nest">
-                                    <input class="form-control mb-1" type="text" placeholder="">
+                                    <input class="form-control mb-1" required type="number" name="sell_rate" placeholder="">
                                    
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Purchase Rate</label>
                                 <div class="form-group--nest">
-                                    <input class="form-control mb-1" type="text" placeholder="">
+                                    <input class="form-control mb-1" required type="number" name="purchase_rate" placeholder="">
                                    
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Your Amount</label>
                                 <div class="form-group--nest">
-                                    <input class="form-control mb-1" type="text" placeholder="">
+                                    <input class="form-control mb-1"required type="number" name="your_amount" placeholder="">
                                    
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
                                 <div class="form-group--nest">
-                                    <textarea class="form-control" rows="6" placeholder="Enter product description..."></textarea>
+                                    <textarea class="form-control"required rows="6" name="description" placeholder="Enter product description..."></textarea>
 
                                    
                                 </div>
@@ -184,9 +190,9 @@
                                 <label>Publication Status
                                 </label>
                                 <div class="form-group__content">
-                                    <select class="ps-select" title="Status">
-                                        <option value="1">Now</option>
-                                        <option value="2">Later</option>
+                                    <select class="ps-select" title="Status" name="status">
+                                        <option value="0">Now</option>
+                                        <option value="0">Later</option>
                                      
                                     </select>
                                 </div>
@@ -211,8 +217,8 @@
                 </div>
             </div>
         </div>
-        <div class="ps-form__bottomd"><a class="ps-btn ps-btn--black" href="products.html">Back</a>
-            <button class="ps-btn ps-btn--gray">Cancel</button>
+        <div class="ps-form__bottomd" style="text-align:center;"><a class="ps-btn ps-btn--black" href="products.html">Back</a>
+            <button class="ps-btn ps-btn--gray" type="reset">Cancel</button>
             <button class="ps-btn">Submit</button>
         </div>
     </form>

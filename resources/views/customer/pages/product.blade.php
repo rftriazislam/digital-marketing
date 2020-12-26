@@ -6,10 +6,10 @@ Unistag Digital||Product
 @section('maincontent')
 
 <section class="ps-items-listing">
-    {{-- <div class="ps-section__actions"><a class="ps-btn success" href="{{ route('customer.addproduct') }}"><i class="icon icon-plus mr-2"></i>New Product</a></div> --}}
+    {{-- <div class="ps-section__actions"><a class="ps-btn success" href=""><i class="icon icon-plus mr-2"></i>New Product</a></div> --}}
     <div class="ps-section__header">
         <div class="ps-section__filter">
-            <form class="ps-form--filter" action="{{ route('customer.listroduct') }}" method="post">
+            <form class="ps-form--filter" action="{{ route('customer.listpoduct') }}" method="post">
              @csrf
                 <div class="ps-form__left">
                    
@@ -17,7 +17,7 @@ Unistag Digital||Product
                     
                         <select   id="idcategory" required class="form-control col-8"  name="category_id" >
 
-                            <option value="" selected disabled>Select</option>
+                            <option value="" selected disabled>Select Category</option>
                                     
                             @foreach($category as $v_category)
                             <option value="{{$v_category->id}}">{{$v_category->category_name}}</option>
@@ -29,7 +29,7 @@ Unistag Digital||Product
                     <div class="form-group row">
                     
                         <select   id="idsubcategory" class="form-control col-8" required  name="subcategory_id" >
-                          <option value="" selected disabled>Select</option>
+                          <option value="" selected disabled>Select Subcategory</option>
                         </select>
                       </div>
                     <div class="form-group">
@@ -45,149 +45,137 @@ Unistag Digital||Product
             </form>
         </div>
         <div class="ps-section__search">
-            <form class="ps-form--search-simple" action="index.html" method="get">
-                <input class="form-control" type="text" placeholder="Search product" />
-                <button><i class="icon icon-magnifier"></i></button>
-            </form>
+            
         </div>
     </div>
+    <h2 style="text-align:center ">Social Media</h2>
     <div class="ps-section__content">
         <div class="table-responsive">
             <table class="table ps-table">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>SKU</th>
-                        <th>Stock</th>
-                        <th>Price</th>
-                        <th>Categories</th>
-                        <th>Date</th>
-                        <th></th>
+                        <th>Category</th>
+                        <th>Subcategory</th>
+                        <th>Social Name</th>
+                        <th>Link</th>
+                        <th>Friends</th>
+                        <th>Sell Price</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>status</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($social_media->take(8) as $item)
+                        
+                 
                     <tr>
-                        <td>ABH-0</td>
-                        <td><a href="#"><strong>Herschel Leather Duffle Bag In Brown Color</strong></a></td>
-                        <td>AB123456789-1</td>
-                        <td><span class="ps-badge success">Stock</span>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->category_info->category_name }}</td>
+                        <td>{{ $item->subcategory_info->subcategory_name }}</td>
+                        <td><span class="ps-badge success">{{ $item->social_name }}</span>
                         </td>
-                        <td><strong>£125.30</strong></td>
+                        <td>{{ $item->social_link }}</td>
                         <td>
-                            <p class="ps-item-categories"><a href="#">Bags</a><a href="#">Clothing &amp; Apparel</a>
-                            </p>
+                            {{ $item->friend_follower }}
+                        </td> 
+                        <td>
+                            <strong>${{ $item->sell_price }}</strong>
                         </td>
-                        <td>2019/11/06</td>
                         <td>
-                            <div class="dropdown"><a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-ellipsis"></i></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item" href="#">Delete</a></div>
-                            </div>
+                          <img src="{{ asset('back_end/social_images') }}/{{ $item->image }}" alt="" style="height:50px;width:70px;">
+                        </td>
+                       
+                        <td><p> <?php echo  $item->description ?> </p></td>
+                        <td>  <div class="btn-group">
+                            @if($item->status=='1')
+                        
+                            <button type="button" class="btn btn-success"><a href="{{ route('customer.social-status',[$item->id,$item->status])  }}">Active</a>
+                            </button>
+                            @else
+                            <button type="button" class="btn "  style="background: #673ab7;color:white"><a href="{{ route('customer.social-status',[$item->id,$item->status])  }}" >Inactive</a>
+                            </button>
+                            @endif
+                          
+                              
+                                <button type="button" class="btn btn-primary"><a href="">Edit/Update</a></button>
+                                <button type="button" class="btn btn-danger"><a href="{{ route('customer.social-delete',[$item->id]) }}">Delete  </a></button>
+                              </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td>ABH-1</td>
-                        <td><a href="#"><strong>Apple iPhone Retina 6s Plus 64GB</strong></a></td>
-                        <td>CD987654316-1</td>
-                        <td><span class="ps-badge success">Stock</span>
-                        </td>
-                        <td><strong>£1,249.99</strong></td>
-                        <td>
-                            <p class="ps-item-categories"><a href="#">Computers &amp; Technologies</a><a href="#">Technologies</a>
-                            </p>
-                        </td>
-                        <td>2018/12/11</td>
-                        <td>
-                            <div class="dropdown"><a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-ellipsis"></i></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item" href="#">Delete</a></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ABH-2</td>
-                        <td><a href="#"><strong>Marshall Kilburn Portable Wireless Speaker</strong></a></td>
-                        <td>SF1133569600-1</td>
-                        <td><span class="ps-badge success">Stock</span>
-                        </td>
-                        <td><strong>£36.78</strong></td>
-                        <td>
-                            <p class="ps-item-categories"><a href="#">Babies &amp; Moms</a><a href="#">Refrigerators</a>
-                            </p>
-                        </td>
-                        <td>2018/12/11</td>
-                        <td>
-                            <div class="dropdown"><a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-ellipsis"></i></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item" href="#">Delete</a></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ABH-3</td>
-                        <td><a href="#"><strong>Xbox One Wireless Controller Black Color</strong></a></td>
-                        <td>AB123456788</td>
-                        <td><span class="ps-badge gray">Out-of-stock</span>
-                        </td>
-                        <td><strong>£55.30</strong></td>
-                        <td>
-                            <p class="ps-item-categories"><a href="#">Accessories</a><a href="#">Air Conditioners</a>
-                            </p>
-                        </td>
-                        <td>2018/12/11</td>
-                        <td>
-                            <div class="dropdown"><a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-ellipsis"></i></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item" href="#">Delete</a></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ABH-4</td>
-                        <td><a href="#"><strong>Grand Slam Indoor Of Show Jumping Novel</strong></a></td>
-                        <td>AB123456788</td>
-                        <td><span class="ps-badge gray">Out-of-stock</span>
-                        </td>
-                        <td><strong>£32.39</strong></td>
-                        <td>
-                            <p class="ps-item-categories"><a href="#">Books &amp; Office</a><a href="#">Cars &amp; Motocycles</a>
-                            </p>
-                        </td>
-                        <td>2018/12/11</td>
-                        <td>
-                            <div class="dropdown"><a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-ellipsis"></i></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item" href="#">Delete</a></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ABH-5</td>
-                        <td><a href="#"><strong>Rayban Rounded Sunglass Brown Color</strong></a></td>
-                        <td>AB123456783</td>
-                        <td><span class="ps-badge success">Stock</span>
-                        </td>
-                        <td><strong>£321.39</strong></td>
-                        <td>
-                            <p class="ps-item-categories"><a href="#">Clothing &amp; Apparel</a><a href="#">Cars &amp; Motocycles</a>
-                            </p>
-                        </td>
-                        <td>2018/12/11</td>
-                        <td>
-                            <div class="dropdown"><a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-ellipsis"></i></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item" href="#">Delete</a></div>
-                            </div>
-                        </td>
-                    </tr>
+                   @endforeach
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="ps-section__footer">
-        <p>Show 10 in 30 items.</p>
-        <ul class="pagination">
-            <li><a href="#"><i class="icon icon-chevron-left"></i></a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#"><i class="icon-chevron-right"></i></a></li>
-        </ul>
+    <h2 style="text-align:center ">Make Money</h2>
+    <div class="ps-section__content">
+        <div class="table-responsive">
+            <table class="table ps-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Subcategory</th>
+                        <th>Send Currency</th>
+                        <th>Send Wallet</th>
+                        <th>Send Account</th>
+                        <th>Get Currency</th>
+                        <th>Get Wallet</th>
+                        <th>Get Account</th>
+                        <th>Sell Rate</th>
+                        <th>Purchase Rate</th>
+                        <th>Your Rmount</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($make_money->take(8) as $item)
+                        
+                 
+                    <tr>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->category_info->category_name }}</td>
+                        <td>{{ $item->subcategory_info->subcategory_name }}</td>
+                        <td>
+                            <strong>${{ $item->send_currency }}</strong>
+                        </td>
+                        <td><span class="ps-badge success">{{ $item->send_wallet}}</span>
+                        </td>
+                        <td>{{ $item->send_account }}</td>
+                        <td>
+                            ${{ $item->get_currency }}
+                        </td> 
+                        <td>
+                            <strong>{{ $item->get_wallet }}</strong>
+                        </td>
+                        <td>{{ $item->get_account }}</td>
+                        <td>
+                            {{ $item->sell_rate }}
+                        </td> 
+        
+                        <td>{{ $item->purchase_rate }}</td>
+                        <td>
+                            {{ $item->your_amount }}
+                        </td> 
+                        <td><p> <?php echo  $item->description ?> </p></td>
+                        <td>
+                            @if($item->status=='1')
+                        
+                            <button  style="background-color: #ffffff;border-width: 0px;"><a class="ps-btn success"  style="padding: 10px 30px;color:white">Active</a>
+                            </button>
+                            @else
+                            <button  style="background-color: #ffffff;border-width: 0px;"><a class="ps-btn danger"  style="padding: 10px 30px;color:white">Inactive</a>
+                            </button>
+                            @endif
+                        </td>
+                    </tr>
+                   @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>
 <script type=text/javascript>  
