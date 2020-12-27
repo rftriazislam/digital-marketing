@@ -5,14 +5,14 @@
       <div class="container">
         <div class="ps-section__left">
           <div class="ps-carousel--nav-inside owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on" data-owl-animate-in="fadeIn" data-owl-animate-out="fadeOut">
-              <a href="#"><img src="{{ asset('front_end/img/slider/home-7/1.jpg') }}" alt=""></a>
+              <a href="#"><img src="{{ asset('banner/side1.jpg') }}" alt=""></a>
               <a href="#"><img src="{{ asset('front_end/img/slider/home-7/2.jpg') }}" alt=""></a>
               <a href="#"><img src="{{ asset('front_end/img/slider/home-7/3.jpg') }}" alt=""></a>
             </div>
         </div>
         <div class="ps-section__right">
-            <a class="ps-collection" href="#"><img src="{{ asset('front_end/img/slider/home-7/promotion-1.jpg') }}" alt=""></a>
-            <a class="ps-collection" href="#"><img src="{{ asset('front_end/img/slider/home-7/promotion-2.jpg') }}" alt=""></a>
+            <a class="ps-collection" href="http://thirdhand.net/"><img src="{{ asset('banner/side1.jpg') }}" alt=""></a>
+            <a class="ps-collection" href="http://unistag.com/"><img src="{{ asset('banner/side2.jpg') }}" alt=""></a>
         </div>
       </div>
     </div>
@@ -44,17 +44,7 @@
             <div class="ps-block__left">
               <h3>Deal of the day</h3>
             </div>
-            <div class="ps-block__right">
-              <figure>
-                <figcaption>End in:</figcaption>
-                <ul class="ps-countdown" data-time="July 21, 2021 15:37:25">
-                  <li><span class="days"></span></li>
-                  <li><span class="hours"></span></li>
-                  <li><span class="minutes"></span></li>
-                  <li><span class="seconds"></span></li>
-                </ul>
-              </figure>
-            </div>
+          
           </div><a href="shop-default.html">View all</a>
         </div>
         <div class="ps-section__content">
@@ -353,9 +343,9 @@
     <div class="ps-promotions">
       <div class="container">
         <div class="row">
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 "><a class="ps-collection" href="shop-default.html"><img src="{{ asset('front_end/img/promotions/home-7/1.jpg')}}" alt=""></a>
+                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 "><a class="ps-collection" href="shop-default.html"><img src="{{ asset('banner/side1.jpg') }}" alt=""></a>
                       </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 "><a class="ps-collection" href="shop-default.html"><img src="{{ asset('front_end/img/promotions/home-7/2.jpg')}}" alt=""></a>
+                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 "><a class="ps-collection" href="shop-default.html"><img src="{{ asset('banner/side2.jpg') }}" alt=""></a>
                       </div>
         </div>
       </div>

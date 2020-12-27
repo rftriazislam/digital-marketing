@@ -10,6 +10,7 @@
                         <th>ID</th>
                         <th>Category name</th>
                         <th>Image</th>
+                        <th>Form Code</th>
                         <th>Publication status</th>
                         <th>Action</th>
                     </tr>
@@ -20,6 +21,7 @@
                         <td>{{ $v_category->id }}</td>
                         <td><strong>{{ $v_category->category_name}}</strong></td>
                         <td><img  src="{{ asset('back_end/category_images') }}/{{ $v_category->image }}" style="width:60px;height:40px"></td>
+                        <td><strong>{{ $v_category->form_name}}</strong></td>
                         <td>  
                             <div class="btn-group" role="group" aria-label="Basic example">
                                                                                          
@@ -91,6 +93,7 @@
                             @endforeach
 
             <div class="ps-form__content">
+                <h5>Updated</h5>
                 <div class="form-group">
                     <label>Category Name<sup>*</sup>
                     </label>
@@ -103,7 +106,17 @@
                     <input  type="file" name="image" value="{{ $category_edit->category_name}}" placeholder="Enter category Image" />
                 </div>
            
-                
+                <div class="form-group form-group--select">
+                    <label>Form Code
+                    </label>
+                    <div class="form-group__content">
+                        <select class="ps-select" title="Status" name="form_name">
+                            <option value="social_media"{{($category_edit->form_name ==='social_media') ? 'selected' : ''}}>Social Media</option>
+                            <option value="make_payment"{{($category_edit->form_name ==='make_payment') ? 'selected' : ''}}>Make Payment</option>
+                            <option value="product"{{($category_edit->form_name ==='product') ? 'selected' : ''}}>Product</option>
+                        </select>
+                    </div>
+                </div>
             </div>
             <div class="ps-form__bottom">
                 <button class="ps-btn ps-btn--gray" ><a href="{{ route('admin.category') }}">Cancel </a></button>

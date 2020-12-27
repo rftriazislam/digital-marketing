@@ -72,7 +72,7 @@
                             <li><a href="{{ route("admin.category") }}"><i class="icon-papers"></i>Categories</a></li>
                             <li><a href="{{ route("admin.subcategory") }}"><i class="icon-papers"></i>Sub Categories</a></li>
 
-                            <li><a href="products.html"><i class="icon-database"></i>Products</a></li>
+                            <li><a href="{{ route('product_permission') }}"><i class="icon-database"></i>Product Permission</a></li>
                             <li><a href="orders.html"><i class="icon-bag2"></i>Orders</a></li>
                             <li><a href="customers.html"><i class="icon-users2"></i>Customers</a></li>
                             <li><a href="coupons.html"><i class="icon-percent-circle"></i>Coupons</a></li>

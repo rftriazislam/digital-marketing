@@ -10,6 +10,7 @@
                         <th>ID</th>
                         <th>Category name</th>
                         <th>Image</th>
+                        <th>Form Code</th>
                         <th>Publication status</th>
                         <th>Action</th>
                     </tr>
@@ -20,6 +21,7 @@
                         <td>{{ $v_category->id }}</td>
                         <td><strong>{{ $v_category->category_name}}</strong></td>
                         <td><img  src="{{ asset('back_end/category_images') }}/{{ $v_category->image }}" style="width:60px;height:40px"></td>
+                        <td><strong>{{ $v_category->form_name}}</strong></td>
                         <td>  
                             <div class="btn-group" role="group" aria-label="Basic example">
                                                                                          
@@ -101,7 +103,17 @@
                     </label>
                     <input  type="file" name="image" placeholder="Enter category Image" />
                 </div>
-           
+                <div class="form-group form-group--select">
+                    <label>Form Code
+                    </label>
+                    <div class="form-group__content">
+                        <select class="ps-select" title="Status" name="form_name">
+                            <option value="social_media">Social Media</option>
+                            <option value="make_payment">Make Payment</option>
+                            <option value="product">Product</option>
+                        </select>
+                    </div>
+                </div>
                 
             </div>
             <div class="ps-form__bottom">

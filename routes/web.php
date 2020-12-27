@@ -52,6 +52,10 @@ Route::group(['middleware' => ['auth', 'admin'],], function () {
     Route::get('/admin-sub-category-delete/{id}', 'AdminController@subcategorydelete');
     Route::get('/admin-sub-category-edit/{id}', 'AdminController@subcategoryedit');
     Route::post('/admin-sub-category-updated', 'AdminController@subcategoryupdated')->name('admin.subcategoryupdated');
+    Route::get('/admin-product-permission', 'AdminController@productpermission')->name('product_permission');
+    Route::get('/admin-permission-make-payment', 'AdminController@permissionmakemoney')->name('permission_makemoney');
+    Route::get('/admin-social-status/{id}/{status}', 'AdminController@socialstatus')->name('admin.social-status');
+    Route::get('/admin-make-status/{id}/{status}', 'AdminController@makestatus')->name('admin.make-status');
 });
 
 Route::group(['middleware' => ['auth', 'customer'],], function () {
