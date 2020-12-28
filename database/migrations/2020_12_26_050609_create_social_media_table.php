@@ -15,6 +15,7 @@ class CreateSocialMediaTable extends Migration
     {
         Schema::create('social_media', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_post_id');
             $table->integer('category_id');
             $table->integer('subcategory_id');
             $table->string('social_name');

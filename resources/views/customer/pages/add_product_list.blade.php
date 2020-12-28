@@ -89,7 +89,7 @@
             <button class="ps-btn">Submit</button>
         </div>
     </form>
-    @elseif($subcategory->category_info->form_name =='make_money')
+    @elseif($subcategory->category_info->form_name =='make_payment')
     <form class="ps-form ps-form--new-product" action="{{ route('customer.savemakemoney') }}" method="post">
         @csrf
         <div class="ps-form__content">

@@ -35,7 +35,7 @@
              
                 <tr>
                     <td>{{ $item->id }}</td>
-                    <td>Null</td>
+                    <td>{{ $item->user_info->name }}</td>
                     <td>{{ $item->category_info->category_name }}</td>
                     <td>{{ $item->subcategory_info->subcategory_name }}</td>
                     <td><span class="ps-badge success">{{ $item->social_name }}</span>

@@ -71,7 +71,7 @@ class AdminController extends Controller
 
         $category_update = Category::find($request->category_id);
         $category_update->category_name = $request->category_name;
-
+        $category_update->form_name = $request->form_name;
         if ($request->hasfile('image')) {
             $image = $request->file('image');
             $filename = $request->category_id . '.' . $image->getClientOriginalExtension();

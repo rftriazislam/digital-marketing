@@ -15,6 +15,7 @@ class CreateMakeMoneyTable extends Migration
     {
         Schema::create('make_money', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_post_id');
             $table->integer('category_id');
             $table->integer('subcategory_id');
             $table->double('send_currency');

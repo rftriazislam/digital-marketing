@@ -11,7 +11,10 @@ class SocialMedia extends Model
         'category_id', 'subcategory_id', 'social_name',
         'social_link', 'friend_follower', 'sell_price', 'description', 'status', 'updated_at'
     ];
-
+    public function user_info()
+    {
+        return $this->hasOne('App\User', 'id', 'user_post_id');
+    }
     public function category_info()
     {
         return $this->hasOne('App\Category', 'id', 'category_id');

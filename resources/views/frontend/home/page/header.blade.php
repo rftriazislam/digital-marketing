@@ -1,21 +1,15 @@
+@php( $category = \App\Category::with('subcategory')->where('status',1)->get() )
 <header class="header header--standard header--electronic" data-sticky="true">
     <div class="header__top">
       <div class="container">
         <div class="header__left">
-          <p>Welcome to Martfury Online Shopping Store !</p>
+          <p>Welcome to Digital Online Store !</p>
         </div>
         <div class="header__right">
           <ul class="header__top-links">
             <li><a href="#">Store Location</a></li>
             <li><a href="#">Track Your Order</a></li>
-            <li>
-              <div class="ps-dropdown"><a href="#">US Dollar</a>
-                <ul class="ps-dropdown-menu">
-                  <li><a href="#">Us Dollar</a></li>
-                  <li><a href="#">Euro</a></li>
-                </ul>
-              </div>
-            </li>
+           
             <li>
               <div class="ps-dropdown language"><a href="#"><img src="{{ asset('front_end/img/flag/en.png') }}" alt=""> English</a>
                 <ul class="ps-dropdown-menu">
@@ -32,95 +26,40 @@
       <div class="container">
         <div class="header__content-left"><a class="ps-logo" href="index.html"><img src="{{ asset('front_end/logo/D-1.png') }}" alt="Unistag Digital"></a>
           <div class="menu--product-categories">
-            <div class="menu__toggle"><i class="icon-menu"></i><span> Shop by Department</span></div>
+            <div class="menu__toggle"><i class="icon-menu"></i><span>Unistag Digital</span></div>
             <div class="menu__content">
                           <ul class="menu--dropdown">
-                            <li><a href="#"><i class="icon-star"></i> Hot Promotions</a>
-                            </li>
-                            <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-laundry"></i> Consumer Electronic</a>
+                            @foreach ($category as $v_category)
+                                
+                            
+                            <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-star"></i>{{ $v_category->category_name }}</a>
                               <div class="mega-menu">
+                               
                                 <div class="mega-menu__column">
-                                  <h4>Electronic<span class="sub-toggle"></span></h4>
+                          
+                                  <h4>{{ $v_category->category_name }}<span class="sub-toggle"></span>
+                                  
+                                  </h4>
                                               <ul class="mega-menu__list">
-                                                <li><a href="#">Home Audio &amp; Theathers</a>
+                                                @foreach ($v_category->subcategory as $v_subcategory)
+                                                <li><a href="#">{{ $v_subcategory->subcategory_name }}</a>
                                                 </li>
-                                                <li><a href="#">TV &amp; Videos</a>
-                                                </li>
-                                                <li><a href="#">Camera, Photos &amp; Videos</a>
-                                                </li>
-                                                <li><a href="#">Cellphones &amp; Accessories</a>
-                                                </li>
-                                                <li><a href="#">Headphones</a>
-                                                </li>
-                                                <li><a href="#">Videosgames</a>
-                                                </li>
-                                                <li><a href="#">Wireless Speakers</a>
-                                                </li>
-                                                <li><a href="#">Office Electronic</a>
-                                                </li>
+                                               @endforeach
                                               </ul>
+
+                                   
+
                                 </div>
-                                <div class="mega-menu__column">
-                                  <h4>Accessories &amp; Parts<span class="sub-toggle"></span></h4>
-                                              <ul class="mega-menu__list">
-                                                <li><a href="#">Digital Cables</a>
-                                                </li>
-                                                <li><a href="#">Audio &amp; Video Cables</a>
-                                                </li>
-                                                <li><a href="#">Batteries</a>
-                                                </li>
-                                              </ul>
-                                </div>
+                             
                               </div>
                             </li>
-                            <li><a href="#"><i class="icon-shirt"></i> Clothing &amp; Apparel</a>
+                              @endforeach
+                           
+                            <li><a href="#"><i class="icon-car-siren"></i>Wishlist</a>
                             </li>
-                            <li><a href="#"><i class="icon-lampshade"></i> Home, Garden &amp; Kitchen</a>
+                            <li><a href="#"><i class="icon-wrench"></i>Card</a>
                             </li>
-                            <li><a href="#"><i class="icon-heart-pulse"></i> Health &amp; Beauty</a>
-                            </li>
-                            <li><a href="#"><i class="icon-diamond2"></i> Yewelry &amp; Watches</a>
-                            </li>
-                            <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-desktop"></i> Computer &amp; Technology</a>
-                              <div class="mega-menu">
-                                <div class="mega-menu__column">
-                                  <h4>Computer &amp; Technologies<span class="sub-toggle"></span></h4>
-                                              <ul class="mega-menu__list">
-                                                <li><a href="#">Computer &amp; Tablets</a>
-                                                </li>
-                                                <li><a href="#">Laptop</a>
-                                                </li>
-                                                <li><a href="#">Monitors</a>
-                                                </li>
-                                                <li><a href="#">Networking</a>
-                                                </li>
-                                                <li><a href="#">Drive &amp; Storages</a>
-                                                </li>
-                                                <li><a href="#">Computer Components</a>
-                                                </li>
-                                                <li><a href="#">Security &amp; Protection</a>
-                                                </li>
-                                                <li><a href="#">Gaming Laptop</a>
-                                                </li>
-                                                <li><a href="#">Accessories</a>
-                                                </li>
-                                              </ul>
-                                </div>
-                              </div>
-                            </li>
-                            <li><a href="#"><i class="icon-baby-bottle"></i> Babies &amp; Moms</a>
-                            </li>
-                            <li><a href="#"><i class="icon-baseball"></i> Sport &amp; Outdoor</a>
-                            </li>
-                            <li><a href="#"><i class="icon-smartphone"></i> Phones &amp; Accessories</a>
-                            </li>
-                            <li><a href="#"><i class="icon-book2"></i> Books &amp; Office</a>
-                            </li>
-                            <li><a href="#"><i class="icon-car-siren"></i> Cars &amp; Motocycles</a>
-                            </li>
-                            <li><a href="#"><i class="icon-wrench"></i> Home Improments</a>
-                            </li>
-                            <li><a href="#"><i class="icon-tag"></i> Vouchers &amp; Services</a>
+                            <li><a href="#"><i class="icon-tag"></i>Services</a>
                             </li>
                           </ul>
             </div>
@@ -182,10 +121,7 @@
                       </li>
                       <li><a href="{{route('product')}}"><i class="icon-laundry"></i> Product</a>
                       </li>
-                      <li><a href="homepage-4.html"><i class="icon-laptop"></i> Computer &amp; Technology</a>
-                      </li>
-                      <li><a href="homepage-4.html"><i class="icon-camera2"></i> Camera &amp; Videos</a>
-                      </li>
+                     
                      
                     </ul>
       </div>

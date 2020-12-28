@@ -8,6 +8,7 @@ use App\MakeMoney;
 use App\SocialMedia;
 use App\Subcategory;
 use Image;
+use Auth;
 
 class CustomerController extends Controller
 {
@@ -58,6 +59,7 @@ class CustomerController extends Controller
         ]);
 
         $social_media_save = new SocialMedia();
+        $social_media_save->user_post_id = Auth::user()->id;
         $social_media_save->category_id = $request->category_id;
         $social_media_save->subcategory_id = $request->subcategory_id;
         $social_media_save->social_name = $request->social_name;
@@ -108,6 +110,7 @@ class CustomerController extends Controller
         ]);
 
         $make_money_save = new MakeMoney();
+        $make_money_save->user_post_id = Auth::user()->id;
         $make_money_save->category_id = $request->category_id;
         $make_money_save->subcategory_id = $request->subcategory_id;
         $make_money_save->send_currency = $request->send_currency;
