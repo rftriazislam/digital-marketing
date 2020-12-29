@@ -30,6 +30,16 @@ class FrontendController extends Controller
     {
         return view('frontend.home.page.subcategory');
     }
+
+
+    public function singlesubcategory($id)
+    {
+        $social = SocialMedia::where('subcategory_id', $id)->where('status', 1)->get();
+
+        return view('frontend.home.page.singlesubcategory', compact('social'));
+    }
+
+
     public function product()
     {
         return view('frontend.home.page.product');

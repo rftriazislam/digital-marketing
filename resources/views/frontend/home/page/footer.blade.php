@@ -1,26 +1,27 @@
+@php( $category = \App\Category:: where('status',1)->get() )
 <footer class="ps-footer">
     <div class="container">
       <div class="ps-footer__links">
-        <p><strong>Consumer Electric:</strong><a href="#">Air Conditioners</a><a href="#">Audios &amp; Theaters</a><a href="#">Car Electronics</a><a href="#">Office Electronics</a><a href="#">TV Televisions</a><a href="#">Washing Machines</a>
+        @foreach ($category as $v_category)
+            
+  
+        <p>
+          <strong>{{ $v_category->category_name }}</strong>
+               @foreach ($v_category->subcategory as $v_subcategory)
+          <a href="#">{{ $v_subcategory->subcategory_name }}</a>
+         @endforeach
         </p>
-        <p><strong>Clothing &amp; Apparel:</strong><a href="#">Printers</a><a href="#">Projectors</a><a href="#">Scanners</a><a href="#">Store &amp; Business</a><a href="#">4K Ultra HD TVs</a><a href="#">LED TVs</a><a href="#">OLED TVs</a>
-        </p>
-        <p><strong>Home, Garden &amp; Kitchen:</strong><a href="#">Cookware</a><a href="#">Decoration</a><a href="#">Furniture</a><a href="#">Garden Tools</a><a href="#">Garden Equipments</a><a href="#">Powers And Hand Tools</a><a href="#">Utensil &amp; Gadget</a>
-        </p>
-        <p><strong>Health &amp; Beauty:</strong><a href="#">Hair Care</a><a href="#">Decoration</a><a href="#">Hair Care</a><a href="#">Makeup</a><a href="#">Body Shower</a><a href="#">Skin Care</a><a href="#">Cologine</a><a href="#">Perfume</a>
-        </p>
-        <p><strong>Jewelry &amp; Watches:</strong><a href="#">Necklace</a><a href="#">Pendant</a><a href="#">Diamond Ring</a><a href="#">Sliver Earing</a><a href="#">Leather Watcher</a><a href="#">Gucci</a>
-        </p>
-        <p><strong>Computer &amp; Technologies:</strong><a href="#">Desktop PC</a><a href="#">Laptop</a><a href="#">Smartphones</a><a href="#">Tablet</a><a href="#">Game Controller</a><a href="#">Audio &amp; Video</a><a href="#">Wireless Speaker</a><a href="#">Done</a>
-        </p>
+        
+       
+         @endforeach
       </div>
       <div class="ps-footer__widgets">
         <aside class="widget widget_footer widget_contact-us">
           <h4 class="widget-title">Contact us</h4>
           <div class="widget_content">
             <p>Call us 24/7</p>
-            <h3>1800 97 97 69</h3>
-            <p>502 New Design Str, Melbourne, Australia <br><a href="mailto:contact@martfury.co">contact@martfury.co</a></p>
+            <h3>+8801716967050</h3>
+            <p>Head Office & Marketing Office: House # 49, Road # 12, Sector # 11 Uttara - 1230, Dhaka, Bangladesh<br><a href="mailto:info@unistag.com">info@unistag.com</a></p>
             <ul class="ps-list--social">
               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
