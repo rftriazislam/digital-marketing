@@ -21,6 +21,28 @@ class FrontendController extends Controller
         return view('frontend.home.page.maincontent', compact('category', 'subcategory', 'social', 'makepayment'));
     }
 
+    public function addtocart(Request $request)
+    {
+        $product = SocialMedia::findOrFail($request->input('product_id'));
+        $cart = session()->has('cart') ? session()->get('cart') : [];
+        if (array_key_exists($product->id, $cart)) {
+            $cart[$product->id]['quantity']++;
+            // $cart[$product->sell_rate]['sell_rate']++;
+        } else {
+            $cart[$product->id] = [
+                'id' => $product->id,
+                'quantity' => 1,
+                'unit_price' => $product->sell_price,
+            ];
+        }
+        session(['cart' => $cart]);
+        session()->flash('message', $product->id . ' added to cart.');
+
+        $data = [];
+        $data['cart'] = session()->has('cart') ? session()->get('cart') : [];
+
+        return response()->json($data);
+    }
 
     public function category()
     {
@@ -32,11 +54,18 @@ class FrontendController extends Controller
     }
 
 
-    public function singlesubcategory($id)
+    public function singlesubcategory($id, $category_name)
     {
-        $social = SocialMedia::where('subcategory_id', $id)->where('status', 1)->get();
+        if ($category_name == 'social_media') {
+            $social = SocialMedia::where('subcategory_id', $id)->where('status', 1)->get();
+            return view('frontend.home.page.singlesubcategory', compact('social'));
+        } elseif ($category_name == 'make_payment') {
+            $makepayment = MakeMoney::where('subcategory_id', $id)->where('status', 1)->get();
+        }
 
-        return view('frontend.home.page.singlesubcategory', compact('social'));
+
+
+        return view('frontend.home.page.singlesubcategory', compact('social', 'makepayment'));
     }
 
 

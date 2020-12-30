@@ -31,11 +31,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/category', 'FrontendController@category')->name('category');
 Route::get('/sub-category', 'FrontendController@subcategory')->name('subcategory');
-Route::get('/single-subcategory/{id}', 'FrontendController@singlesubcategory')->name('singlesubcategory');
+Route::get('/single-subcategory/{id}/{category_id}', 'FrontendController@singlesubcategory')->name('singlesubcategory');
 
 
 Route::get('/product', 'FrontendController@product')->name('product');
 
+Route::post('/add-to-cart', 'FrontendController@addtocart')->name('addtocart');
 
 Route::group(['middleware' => ['auth', 'admin'],], function () {
 

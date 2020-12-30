@@ -180,8 +180,8 @@ Unistag Digital||Product
 </section>
 <script type=text/javascript>  
 
-    $('#idcategory').change(function(){
-        console.log("djjdjd");
+    // $('#idcategory').change(function(){
+        // console.log("djjdjd");
     var category_id=$(this).val();
    
 

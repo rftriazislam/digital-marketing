@@ -7784,7 +7784,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: none;
   }
   .ps-carousel--nav .owl-dots {
-    display: block !important;
+    display: none !important;
+     /* change block 30-12-2020 */
   }
 }
 
