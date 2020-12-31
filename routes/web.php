@@ -36,6 +36,10 @@ Route::get('/single-subcategory/{id}/{category_id}', 'FrontendController@singles
 
 Route::get('/product', 'FrontendController@product')->name('product');
 
+Route::get('/add-cart/{id}/{form_name}', 'FrontendController@addcartpage')->name('addcart');
+Route::get('/cart-page', 'FrontendController@cartpage')->name('cartpage');
+Route::get('/checkout', 'FrontendController@checkout')->name('checkout');
+
 Route::post('/add-to-cart', 'FrontendController@addtocart')->name('addtocart');
 
 Route::group(['middleware' => ['auth', 'admin'],], function () {

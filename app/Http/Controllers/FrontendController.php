@@ -7,6 +7,7 @@ use App\MakeMoney;
 use App\SocialMedia;
 use App\Subcategory;
 use Illuminate\Http\Request;
+use Auth;
 
 class FrontendController extends Controller
 {
@@ -46,11 +47,14 @@ class FrontendController extends Controller
 
     public function category()
     {
-        return view('frontend.home.page.category');
+        $category = Category::where('status', 1)->get();
+        return view('frontend.home.page.category', compact('category'));
     }
     public function subcategory()
     {
-        return view('frontend.home.page.subcategory');
+        $category = Category::where('status', 1)->get();
+
+        return view('frontend.home.page.subcategory', compact('category'));
     }
 
 
@@ -58,24 +62,40 @@ class FrontendController extends Controller
     {
         if ($category_name == 'social_media') {
             $social = SocialMedia::where('subcategory_id', $id)->where('status', 1)->get();
-            return view('frontend.home.page.singlesubcategory', compact('social'));
+            $makepayment = '';
+            return view('frontend.home.page.singlesubcategory', compact('social', 'makepayment'));
         } elseif ($category_name == 'make_payment') {
             $makepayment = MakeMoney::where('subcategory_id', $id)->where('status', 1)->get();
+            $social = '';
+            return view('frontend.home.page.singlesubcategory', compact('social', 'makepayment'));
         }
-
-
-
-        return view('frontend.home.page.singlesubcategory', compact('social', 'makepayment'));
     }
 
-
+    public function addcartpage($id, $form_name)
+    {
+        if ($form_name == 'social_media') {
+            $social = SocialMedia::where('id', $id)->where('status', 1)->first();
+        }
+        return view('frontend.home.page.addtocart', compact('social'));
+    }
     public function product()
     {
+
         return view('frontend.home.page.product');
     }
 
-
-
+    public function cartpage()
+    {
+        if (Auth::user() == '') {
+            echo 'null';
+        } else {
+            return view('frontend.home.page.cartpage');
+        }
+    }
+    public function checkout()
+    {
+        return view('frontend.home.page.checkout');
+    }
 
 
     public function login()

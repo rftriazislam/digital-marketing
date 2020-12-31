@@ -24,7 +24,7 @@
     </div>
     <div class="header__content">
       <div class="container">
-        <div class="header__content-left"><a class="ps-logo" href="index.html"><img src="{{ asset('front_end/logo/D-1.png') }}" alt="Unistag Digital"></a>
+        <div class="header__content-left"><a class="ps-logo" href="{{ url('/') }}"><img src="{{ asset('front_end/logo/D-1.png') }}" alt="Unistag Digital"></a>
           <div class="menu--product-categories">
             <div class="menu__toggle"><i class="icon-menu"></i><span>Unistag Digital</span></div>
             <div class="menu__content">
@@ -108,8 +108,8 @@
                       </li>
                       <li><a href="{{route('subcategory')}}"><i class="icon-surveillance"></i>Subcategory</a>
                       </li>
-                      <li><a href="{{route('product')}}"><i class="icon-laundry"></i> Product</a>
-                      </li>
+                      {{-- <li><a href="{{route('product')}}"><i class="icon-laundry"></i> Product</a>
+                      </li> --}}
                      
                      
                     </ul>

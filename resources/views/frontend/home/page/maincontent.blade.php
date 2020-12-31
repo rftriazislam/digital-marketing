@@ -30,11 +30,12 @@
                         <div class="ps-block--category-2" data-mh="categories">
                           <a href="{{ route('singlesubcategory',[$v_subcategory->id,$v_subcategory->category_info->form_name])}}"> 
                           <div class="ps-block__thumbnail"><img class="img_s" src="{{ asset('back_end/subcategory_images') }}/{{ $v_subcategory->subcategory_image }}" alt=""></div>
-
+                        </a>
                           <div class="ps-block__content">
                             <h4>{{ $v_subcategory->subcategory_name }}</h4>
-                           </a>
-                          </div>
+                          
+                          </div> 
+                        
                         </div>
                       </div>
                  @endforeach     
@@ -57,7 +58,8 @@
                
            
             <div class="ps-product ps-product--inner">
-              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('back_end/subcategory_images') }}/{{ $v_social->subcategory_info->subcategory_image }}" alt=""></a>
+              <div class="ps-product__thumbnail"><a href="{{ route('addcart',[$v_social->id,$v_social->subcategory_info->category_info->form_name]) }}">
+                <img src="{{ asset('back_end/subcategory_images') }}/{{ $v_social->subcategory_info->subcategory_image }}" alt=""></a>
                 <div class="ps-product__badge">0%</div>
                
               </div>
@@ -206,13 +208,15 @@
                                   </ul> --}}
                                 </div>
                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $make_payment->subcategory_info->subcategory_name }}</a>
-                                  <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">{{ $make_payment->send_wallet }}<b style="float: right;">$ {{ $make_payment->your_amount }}</b> </a>
+                                  <div class="ps-product__content">
+                                    <a class="ps-product__title" href="product-default.html">{{ $make_payment->send_wallet }}<b style="float: right;">$ {{ $make_payment->your_amount }}</b> </a>
                                    
                                     <p class="ps-product__price sale" style="text-align: center">${{ $make_payment->sell_rate }} = {{ $make_payment->purchase_rate }} BDT</p>
                                     <button class="btn" style="width:100%;color:white;background:#0587f1">Add to Card</button>
                                   </div>
-                                  <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">{{ $make_payment->send_wallet }} <b style="float: right;"> ${{ $make_payment->your_amount }}</b></a>
-                                    <p class="" style="text-align: center">$1 = 82 BDT</p>
+                                  <div class="ps-product__content hover">
+                                    <a class="ps-product__title" href="product-default.html">{{ $make_payment->send_wallet }} <b style="float: right;"> ${{ $make_payment->your_amount }}</b></a>
+                                    <p class="" style="text-align: center">${{ $make_payment->sell_rate }} = {{ $make_payment->purchase_rate }} BDT</p>
                                     <button class="btn" style="width:100%;color:white;background:#f14705">Add to Card</button>
                                   </div>
                                 
