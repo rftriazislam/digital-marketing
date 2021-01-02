@@ -20,54 +20,43 @@
           <table class="table ps-table--shopping-cart">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Product name</th>
                 <th>PRICE</th>
                 <th>QUANTITY</th>
                 <th>TOTAL</th>
-                <th></th>
+                <th>Remove</th>
               </tr>
             </thead>
             <tbody>
+@php($cart=\Cart::getContent())
+@foreach ($cart as $item)
+    
+
               <tr>
+                <td>{{ $item->id }}</td>
                 <td>
                   <div class="ps-product--cart">
-                    <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/1.jpg" alt=""></a></div>
-                    <div class="ps-product__content"><a href="product-default.html">Facebook ID</a>
-                      <p>Sold By:<strong> HHH</strong></p>
+                    {{-- <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/1.jpg" alt=""></a></div> --}}
+                    <div class="ps-product__content">
+                      <a href="product-default.html">{{ $item->name }}</a>
+                    
                     </div>
                   </div>
                 </td>
-                <td class="price">$220.00</td>
-                <td>
+                <td class="price">${{ $item->price }}</td>
+                {{-- <td>
                   <div class="form-group--number">
                     <button class="up">+</button>
                     <button class="down">-</button>
                     <input class="form-control" type="text" placeholder="1" value="1">
                   </div>
-                </td>
-                <td>$120.00</td>
+                </td> --}}
+                <td>{{ $item->quantity }}</td>
+                <td>${{ $item->getPriceSum() }}</td>
                 <td><a href="#"><i class="icon-cross"></i></a></td>
               </tr>
-              <tr>
-                <td>
-                  <div class="ps-product--cart">
-                    <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/clothing/2.jpg" alt=""></a></div>
-                    <div class="ps-product__content"><a href="product-default.html">Youtube ID</a>
-                      <p>Sold By:<strong> Gold</strong></p>
-                    </div>
-                  </div>
-                </td>
-                <td class="price">$200.00</td>
-                <td>
-                  <div class="form-group--number">
-                    <button class="up">+</button>
-                    <button class="down">-</button>
-                    <input class="form-control" type="text" placeholder="1" value="1">
-                  </div>
-                </td>
-                <td>$200.00</td>
-                <td><a href="#"><i class="icon-cross"></i></a></td>
-              </tr>
+             @endforeach
              
             </tbody>
           </table>
@@ -76,16 +65,16 @@
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 " >
           <div class="ps-block--shopping-total" style="border: 0;background-color:white">
             <div class="ps-block__header">
-              <p>Subtotal <span> $320.00</span></p>
+              <p>Subtotal <span> ${{ \Cart::getSubTotal() }}</span></p>
             </div>
          
-              <h3>Total <span>$320.00</span></h3>
+              <h3>Total <span>${{ \Cart::getTotal() }}</span></h3>
            
           </div>
          
         </div>
       </div>
-      <div class="ps-section__cart-actions"><a class="ps-btn" href="shop-default.html" style="background-color: #673AB7;"><i class="icon-arrow-left"></i> Back to Shopping</a><a class="ps-btn ps-btn--outline" href="{{ route('checkout') }}" style="color:white"><i class="icon-sync"></i> Proceed to checkout</a></div>
+      <div class="ps-section__cart-actions"><a class="ps-btn" href="{{ url('/') }}" style="background-color: #673AB7;"><i class="icon-arrow-left"></i> Back to Shopping</a><a class="ps-btn ps-btn--outline" href="{{ route('checkout') }}" style="color:white"><i class="icon-sync"></i> Proceed to checkout</a></div>
       </div>
       <div class="ps-section__footer" >
         <div class="row" style="margin-bottom: 20px">

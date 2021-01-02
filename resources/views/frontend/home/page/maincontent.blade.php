@@ -70,7 +70,7 @@
                   <div class="ps-product__progress-bar ps-progress" data-value="33">
                    
                     <p style="text-align: center">${{ $v_social->sell_price }}</p>
-                 <button class="btn" style="width:100%;color:white;background:#f14705">Add to Card</button>
+                   <button class="btn" style="width:100%;color:white;background:#f14705">Add to Card</button>
                   </div>
                 </div>
               </div>

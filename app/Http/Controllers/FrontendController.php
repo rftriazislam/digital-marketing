@@ -8,6 +8,8 @@ use App\SocialMedia;
 use App\Subcategory;
 use Illuminate\Http\Request;
 use Auth;
+use Darryldecode\Cart\Cart;
+// use Cart;
 
 class FrontendController extends Controller
 {
@@ -21,28 +23,61 @@ class FrontendController extends Controller
 
         return view('frontend.home.page.maincontent', compact('category', 'subcategory', 'social', 'makepayment'));
     }
-
     public function addtocart(Request $request)
     {
         $product = SocialMedia::findOrFail($request->input('product_id'));
-        $cart = session()->has('cart') ? session()->get('cart') : [];
-        if (array_key_exists($product->id, $cart)) {
-            $cart[$product->id]['quantity']++;
-            // $cart[$product->sell_rate]['sell_rate']++;
-        } else {
-            $cart[$product->id] = [
+        $userID = Auth::user()->id;
+
+        $id = $request->input('product_id');
+        $data_id = \Cart::get($id);
+
+        if ($data_id == null) {
+            \Cart::add(array(
                 'id' => $product->id,
+                'name' => $product->social_name,
+                'price' => $product->sell_price,
+                'image' => '55',
                 'quantity' => 1,
-                'unit_price' => $product->sell_price,
-            ];
+                'attributes' => array(),
+                'model' => $product
+            ));
+
+            $data =  \Cart::getContent();
+            $msg = 'New add';
+
+            return response()->json(['data' => $data, 'message' => $msg], 200);
+
+            return response($data, $msg);
+            // \Cart::clear();
+        } else {
+            $data =  \Cart::getContent();
+            $msg = 'already add';
+            return response()->json(['data' => $data, 'message' => $msg], 200);
         }
-        session(['cart' => $cart]);
-        session()->flash('message', $product->id . ' added to cart.');
 
-        $data = [];
-        $data['cart'] = session()->has('cart') ? session()->get('cart') : [];
 
-        return response()->json($data);
+        // \Cart::clear();
+    }
+
+    public function addtoocart($id)
+    {
+
+        $product = SocialMedia::findOrFail($id);
+        $userID = Auth::user()->id;
+        $data_id = \Cart::get($id);
+        if ($data_id == null) {
+            \Cart::add(array(
+                'id' => $product->id,
+                'name' => $product->social_name,
+                'price' => $product->sell_price,
+                'image' => '55',
+                'quantity' => 1,
+                'attributes' => array(),
+                'model' => $product
+            ));
+        }
+
+        return redirect()->route('cartpage');
     }
 
     public function category()
@@ -86,15 +121,16 @@ class FrontendController extends Controller
 
     public function cartpage()
     {
-        if (Auth::user() == '') {
-            echo 'null';
-        } else {
-            return view('frontend.home.page.cartpage');
-        }
+
+        return view('frontend.home.page.cartpage');
     }
     public function checkout()
     {
-        return view('frontend.home.page.checkout');
+        if (Auth::user() == '') {
+            echo 'null';
+        } else {
+            return view('frontend.home.page.checkout');
+        }
     }
 
 

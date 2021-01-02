@@ -43,23 +43,20 @@
               <div class="ps-product__desc">
                 <p>Link :<a href="{{ $social->social_link}}"><strong>{{ $social->social_link}}</strong></a></p>
                 <p>Friend Follower:<a ><strong>{{ $social->friend_follower}}</strong></a></p>
+                
                 <ul class="ps-list--dot">
                   <li>Details:<br>{{ $social->description }}</li>
           
                 </ul>
+                <h4>Quantity: 1</h4>
               </div>
-              <div class="ps-product__variations">
              
-              </div>
+              
               <div class="ps-product__shopping">
                 <figure>
-                  <figcaption>Quantity</figcaption>
-                  <div class="form-group--number">
-                    <button class="up"><i class="fa fa-plus"></i></button>
-                    <button class="down"><i class="fa fa-minus"></i></button>
-                    <input class="form-control" type="text"name="quantity" placeholder="1">
-                  </div>
-                </figure><a class="ps-btn ps-btn--black" href="">Add to cart</a><a class="ps-btn" href="{{ route('cartpage') }}">Buy Now</a>
+                  
+                  
+                </figure><a class="ps-btn ps-btn--black" href="{{ route('addtoocart',[$social->id ])}}">Add to cart</a><a class="ps-btn" href="{{ route('cartpage') }}">Buy Now</a>
                
               </div>
             

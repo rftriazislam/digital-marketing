@@ -41,6 +41,8 @@ Route::get('/cart-page', 'FrontendController@cartpage')->name('cartpage');
 Route::get('/checkout', 'FrontendController@checkout')->name('checkout');
 
 Route::post('/add-to-cart', 'FrontendController@addtocart')->name('addtocart');
+Route::get('/add-too-cart/{id}', 'FrontendController@addtoocart')->name('addtoocart');
+
 
 Route::group(['middleware' => ['auth', 'admin'],], function () {
 

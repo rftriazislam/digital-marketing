@@ -81,12 +81,30 @@
         </div>
         <div class="header__content-right">
           <div class="header__actions"><a class="header__extra" href="#"><i class="icon-heart"></i><span><i>0</i></span></a>
-            <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>
+            <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>{{  \Cart::getContent()->count() }}</i></span></a>
               <div class="ps-cart__content">
-    
+                <div class="ps-cart__items"style="overflow: scroll;width:100%;height:633px;">
+                  @php($items = \Cart::getContent())
+                 @foreach ($items as $row)
+                     
+                
+                  <div class="ps-product--cart-mobile">
+                    <div class="ps-product__thumbnail"><a href="#"><img src="{{ asset('banner/side1.jpg') }}" alt=""></a></div>
+                    <div class="ps-product__content" >
+                      {{-- <a class="ps-product__remove" href=""><i class="icon-cross"></i></a> --}}
+                      <a href="product-default.html">{{ $row->name }}</a>
+                      <p><strong>Quantity:</strong> <small style="float:right;">{{ $row->quantity }}</small></p>
+                      <p><strong>Price:</strong> <small style="float:right;">${{ $row->price }}</small></p>
+                      <p><strong>Subtotal:</strong> <small style="float:right;">${{ $row->getPriceSum() }}</small></p>
+                   
+                    </div>
+                  </div>
+                  @endforeach
+                </div>
+
                 <div class="ps-cart__footer">
-                  <h3> :<strong>$59.99</strong></h3>
-                  <figure><a class="ps-btn" href="shopping-cart.html">View Cart</a><a class="ps-btn" href="checkout.html">Checkout</a></figure>
+                  <h3> Total Price:<strong>${{ \Cart::getTotal() }}</strong></h3>
+                  <figure><a class="ps-btn" href="{{ route('cartpage') }}">View Cart</a><a class="ps-btn" href="{{ route('checkout') }}">Checkout</a></figure>
                 </div>
 
 

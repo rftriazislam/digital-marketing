@@ -27,7 +27,7 @@
                                       </div>
                                       <div class="ps-product__content hover"><a class="ps-product__title" href="">{{ $v_social->social_name }}</a>
                                         <p class="" style="text-align: center">${{ $v_social->sell_price }}</p>
-                                        <button class="btn" style="width:100%;color:white;background:#f14705;margin-bottom: 2px;"  onclick="add({{ $v_social->id }})">Add to Card</button>
+                                        <button class="btn" style="width:100%;color:white;background:#f14705;margin-bottom: 2px;"  onclick="add({{ $v_social->id }})"><a href="{{ route('cartpage') }}">Add to Card </a></button>
                                       </div>
                                     </div>
                                   </div>
