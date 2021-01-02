@@ -11,7 +11,7 @@
           <div class="ps-form__billing-info">
             <h3 class="ps-form__heading">Contact Information</h3>
             <div class="form-group">
-              <label>Email or Phone number</label>
+              <label>Phone number</label>
               <input class="form-control" type="text" placeholder="">
             </div>
             <div class="form-group">

@@ -68,12 +68,13 @@
                 <td>$200.00</td>
                 <td><a href="#"><i class="icon-cross"></i></a></td>
               </tr>
+             
             </tbody>
           </table>
         </div>
         <div class="row" style="margin-bottom: 20px">
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 " >
-          <div class="ps-block--shopping-total">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 " >
+          <div class="ps-block--shopping-total" style="border: 0;background-color:white">
             <div class="ps-block__header">
               <p>Subtotal <span> $320.00</span></p>
             </div>
@@ -81,9 +82,10 @@
               <h3>Total <span>$320.00</span></h3>
            
           </div>
-          <a class="ps-btn ps-btn--fullwidth" href="{{ route('checkout') }}">Proceed to checkout</a>
+         
         </div>
       </div>
+      <div class="ps-section__cart-actions"><a class="ps-btn" href="shop-default.html" style="background-color: #673AB7;"><i class="icon-arrow-left"></i> Back to Shopping</a><a class="ps-btn ps-btn--outline" href="{{ route('checkout') }}" style="color:white"><i class="icon-sync"></i> Proceed to checkout</a></div>
       </div>
       <div class="ps-section__footer" >
         <div class="row" style="margin-bottom: 20px">
