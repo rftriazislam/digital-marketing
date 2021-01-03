@@ -83,13 +83,13 @@
           <div class="header__actions"><a class="header__extra" href="#"><i class="icon-heart"></i><span><i>0</i></span></a>
             <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>{{  \Cart::getContent()->count() }}</i></span></a>
               <div class="ps-cart__content">
-                <div class="ps-cart__items"style="overflow: scroll;width:100%;height:633px;">
+                <div class="ps-cart__items"style="overflow: scroll;width:100%;height:260px;">
                   @php($items = \Cart::getContent())
                  @foreach ($items as $row)
                      
                 
                   <div class="ps-product--cart-mobile">
-                    <div class="ps-product__thumbnail"><a href="#"><img src="{{ asset('banner/side1.jpg') }}" alt=""></a></div>
+                    <div class="ps-product__thumbnail"><a href="#"><img src="{{ asset('back_end/subcategory_images') }}/{{ $row->attributes->image}}" alt=""></a></div>
                     <div class="ps-product__content" >
                       {{-- <a class="ps-product__remove" href=""><i class="icon-cross"></i></a> --}}
                       <a href="product-default.html">{{ $row->name }}</a>
@@ -112,7 +112,21 @@
             </div>
             <div class="ps-block--user-header">
               <div class="ps-block__left"><i class="icon-user"></i></div>
-              <div class="ps-block__right"><a href="{{route('login')}}">Login</a></div>
+   <div class="ps-block__right">
+              @if(Auth::user()=='')
+              <a href="{{route('login')}}" >Login</a>
+
+              @elseif(Auth::user()->role=='admin')
+              <a href="{{route('admin')}}">Dashboard</a>
+              @elseif(Auth::user()->role=='customer')
+              <a href="{{route('customer')}}" >Blogger</a>
+              @else
+              <a href="{{route('userpofile')}}" >My Profile</a>
+              @endif
+            
+</div>
+
+
             </div>
           </div>
         </div>

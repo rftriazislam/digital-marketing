@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Checkout;
 use App\MakeMoney;
 use App\SocialMedia;
 use App\Subcategory;
@@ -26,8 +27,7 @@ class FrontendController extends Controller
     public function addtocart(Request $request)
     {
         $product = SocialMedia::findOrFail($request->input('product_id'));
-        $userID = Auth::user()->id;
-
+        // \Cart::clear();
         $id = $request->input('product_id');
         $data_id = \Cart::get($id);
 
@@ -38,8 +38,11 @@ class FrontendController extends Controller
                 'price' => $product->sell_price,
                 'image' => '55',
                 'quantity' => 1,
-                'attributes' => array(),
-                'model' => $product
+                'attributes' => array(
+                    'image' => $product->subcategory_info->subcategory_image,
+
+                ),
+                'associatedmodel' => $product
             ));
 
             $data =  \Cart::getContent();
@@ -63,7 +66,7 @@ class FrontendController extends Controller
     {
 
         $product = SocialMedia::findOrFail($id);
-        $userID = Auth::user()->id;
+
         $data_id = \Cart::get($id);
         if ($data_id == null) {
             \Cart::add(array(
@@ -72,7 +75,9 @@ class FrontendController extends Controller
                 'price' => $product->sell_price,
                 'image' => '55',
                 'quantity' => 1,
-                'attributes' => array(),
+                'attributes' => array(
+                    'image' => $product->subcategory_info->subcategory_image,
+                ),
                 'model' => $product
             ));
         }
@@ -108,6 +113,8 @@ class FrontendController extends Controller
 
     public function addcartpage($id, $form_name)
     {
+
+
         if ($form_name == 'social_media') {
             $social = SocialMedia::where('id', $id)->where('status', 1)->first();
         }
@@ -132,7 +139,11 @@ class FrontendController extends Controller
             return view('frontend.home.page.checkout');
         }
     }
+    public function checkoutsave(Request $request)
+    {
 
+        echo $insert_checkout = Checkout::insert($request->all());
+    }
 
     public function login()
     {

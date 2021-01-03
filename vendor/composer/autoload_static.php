@@ -497,6 +497,7 @@ class ComposerStaticInit113563ed3e231e52e9454085ad275248
         'App\\AdminCommission' => __DIR__ . '/../..' . '/app/AdminCommission.php',
         'App\\Balance' => __DIR__ . '/../..' . '/app/Balance.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Checkout' => __DIR__ . '/../..' . '/app/Checkout.php',
         'App\\Commission' => __DIR__ . '/../..' . '/app/Commission.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',

@@ -9,6 +9,7 @@ return array(
     'App\\AdminCommission' => $baseDir . '/app/AdminCommission.php',
     'App\\Balance' => $baseDir . '/app/Balance.php',
     'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Checkout' => $baseDir . '/app/Checkout.php',
     'App\\Commission' => $baseDir . '/app/Commission.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',

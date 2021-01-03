@@ -24,7 +24,7 @@
                 <th>Product name</th>
                 <th>PRICE</th>
                 <th>QUANTITY</th>
-                <th>TOTAL</th>
+                <th>TOTAL PRICE</th>
                 <th>Remove</th>
               </tr>
             </thead>
@@ -37,7 +37,7 @@
                 <td>{{ $item->id }}</td>
                 <td>
                   <div class="ps-product--cart">
-                    {{-- <div class="ps-product__thumbnail"><a href="product-default.html"><img src="img/products/electronic/1.jpg" alt=""></a></div> --}}
+                    <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('back_end/subcategory_images') }}/{{ $item->attributes->image}}" alt=""></a></div>
                     <div class="ps-product__content">
                       <a href="product-default.html">{{ $item->name }}</a>
                     
