@@ -70,7 +70,7 @@
                   <div class="ps-product__progress-bar ps-progress" data-value="33">
                    
                     <p style="text-align: center">${{ $v_social->sell_price }}</p>
-                   <button class="btn" style="width:100%;color:white;background:#f14705">Add to Card</button>
+                   <button class="btn" style="width:100%;color:white;background:#f14705"><a href="{{ route('addtoocart',[$v_social->id ])}}"> Add to Card</a></button>
                   </div>
                 </div>
               </div>
@@ -106,19 +106,13 @@
                
            
             <div class="ps-product ps-product--inner">
-              <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('back_end/subcategory_images') }}/{{ $v_makepayment->subcategory_info->subcategory_image }}" alt=""></a>
-                {{-- <div class="ps-product__badge">-16%</div> --}}
-                {{-- <ul class="ps-product__actions">
-                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
-                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a></li>
-                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                </ul> --}}
+              <div class="ps-product__thumbnail"><a href="{{ route('addcart',[$v_makepayment->id,$v_makepayment->subcategory_info->category_info->form_name]) }}"><img src="{{ asset('back_end/subcategory_images') }}/{{ $v_makepayment->subcategory_info->subcategory_image }}" alt=""></a>
+             
               </div>
               <div class="ps-product__container">
                 <p class="ps-product__price sale">{{ $v_makepayment->your_amount }}$ <b style="float:right">{{ $v_makepayment->send_wallet }}</b></p>
                 <div class="ps-product__content">
-                  <a class="ps-product__title" href="product-default.html">{{ $v_makepayment->subcategory_info->subcategory_name }}</a>
+                  <a class="ps-product__title" href="{{ route('addcart',[$v_makepayment->id,$v_makepayment->subcategory_info->category_info->form_name]) }}">{{ $v_makepayment->subcategory_info->subcategory_name }}</a>
                   <div class="ps-product__progress-bar ps-progress" data-value="33">
                  <p style="text-align: center">$1 = 82 BDT</p>
                  <button class="btn" style="width:100%;color:white;background:#f14705">Add to Card</button>
@@ -150,17 +144,17 @@
                  
                      
             <div class="ps-product">
-                          <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('back_end/subcategory_images') }}/{{ $v_social->subcategory_info->subcategory_image }}" alt=""></a>
+                          <div class="ps-product__thumbnail"><a href="{{ route('addcart',[$v_social->id,$v_social->subcategory_info->category_info->form_name]) }}"><img src="{{ asset('back_end/subcategory_images') }}/{{ $v_social->subcategory_info->subcategory_image }}" alt=""></a>
                             {{-- <div class="ps-product__badge" style="color: black">views</div> --}}
                           
                           </div>
                           <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
-                            <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">{{ $v_social->social_name }}</a>
+                            <div class="ps-product__content"><a class="ps-product__title" href="{{ route('addcart',[$v_social->id,$v_social->subcategory_info->category_info->form_name]) }}">{{ $v_social->social_name }}</a>
                              
                               <p class="" style="text-align: center">${{ $v_social->sell_price }}</p>
                                     <button class="btn" style="width:100%;color:white;background:#0587f1">Add to Card</button>
                             </div>
-                            <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">{{ $v_social->social_name }}</a>
+                            <div class="ps-product__content hover"><a class="ps-product__title" href="{{ route('addcart',[$v_social->id,$v_social->subcategory_info->category_info->form_name]) }}">{{ $v_social->social_name }}</a>
                               <p class="" style="text-align: center">${{ $v_social->sell_price }}</p>
                               <button class="btn" style="width:100%;color:white;background:#f14705">Add to Card</button>
                             </div>

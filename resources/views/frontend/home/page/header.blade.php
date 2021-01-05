@@ -85,7 +85,7 @@
               <div class="ps-cart__content">
                 <div class="ps-cart__items"style="overflow: scroll;width:100%;height:260px;">
                   @php($items = \Cart::getContent())
-                 @foreach ($items as $row)
+                 @forelse ($items as $row)
                      
                 
                   <div class="ps-product--cart-mobile">
@@ -99,7 +99,14 @@
                    
                     </div>
                   </div>
-                  @endforeach
+                
+                       @empty
+
+                    <div class="ps-product--cart-mobile">
+                      
+                    </div>
+
+                    @endforelse
                 </div>
 
                 <div class="ps-cart__footer">
@@ -121,7 +128,7 @@
               @elseif(Auth::user()->role=='customer')
               <a href="{{route('customer')}}" >Blogger</a>
               @else
-              <a href="{{route('userpofile')}}" >My Profile</a>
+              <a href="" >My Profile</a>
               @endif
             
 </div>

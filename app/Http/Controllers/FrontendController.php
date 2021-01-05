@@ -50,12 +50,13 @@ class FrontendController extends Controller
 
             return response()->json(['data' => $data, 'message' => $msg], 200);
 
-            return response($data, $msg);
+            // return response($data, $msg);
             // \Cart::clear();
         } else {
             $data =  \Cart::getContent();
             $msg = 'already add';
             return response()->json(['data' => $data, 'message' => $msg], 200);
+            // return response($data, $msg);
         }
 
 
@@ -117,8 +118,9 @@ class FrontendController extends Controller
 
         if ($form_name == 'social_media') {
             $social = SocialMedia::where('id', $id)->where('status', 1)->first();
+            return view('frontend.home.page.addtocart', compact('social'));
+        } elseif ($form_name == 'make_payment') {
         }
-        return view('frontend.home.page.addtocart', compact('social'));
     }
     public function product()
     {
@@ -134,7 +136,7 @@ class FrontendController extends Controller
     public function checkout()
     {
         if (Auth::user() == '') {
-            echo 'null';
+            return redirect()->route('login');
         } else {
             return view('frontend.home.page.checkout');
         }
@@ -142,7 +144,26 @@ class FrontendController extends Controller
     public function checkoutsave(Request $request)
     {
 
-        echo $insert_checkout = Checkout::insert($request->all());
+        $insert_checkout = new Checkout();
+        $insert_checkout->user_name = $request->user_name;
+        $insert_checkout->email = $request->email;
+        $insert_checkout->phone = $request->phone;
+        $insert_checkout->account_name = $request->account_name;
+        $insert_checkout->account_no = $request->account_no;
+        $insert_checkout->save();
+
+        $name = $request->user_name;
+        $phone = $request->phone;
+        $email = $request->email;
+        return view('frontend.home.page.payment', compact('email', 'name', 'phone'));
+    }
+
+
+    public function paymentcomplete(Request $request)
+    {
+
+        \Cart::clear();
+        return view('frontend.home.page.paymentcomplete');
     }
 
     public function login()

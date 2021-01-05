@@ -2,6 +2,7 @@
 @section('maincontent')
 
 
+
   <div class="ps-top-categories">
     <div class="container">
     <div class="ps-section__header">
@@ -9,6 +10,7 @@
     </div>
     <div class="ps-section__content">
       <div class="row">
+   
         @if($social)
         @foreach ($social as $v_social)
 
@@ -66,16 +68,16 @@
   
   <script type="text/javascript">
       console.log('ssss');
+      
 function add(param){
+
   var sum = param ;
   console.log(sum);
 
   var product_id = param;
 
   var url = "{{ url('/add-to-cart') }}/"+product_id;
- 
- 
-  
+
   $.ajax({
     headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -84,8 +86,19 @@ function add(param){
     url: "{{ url('/add-to-cart') }}",
     data: { product_id: product_id },
    
-    success: function (data) {
-      console.log(data);
+    success: function (data,message) {
+ 
+
+      $.each(data.data, function(i,index){
+             $('#ss').append(               
+             '<p>' +index.id+'</p>'      
+               );
+               $("ul.wishList").append("<li>"+ index.id+"</li>");
+         });
+    
+             
+   
+
 
     },
     error: function (data) {

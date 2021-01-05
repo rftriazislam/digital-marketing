@@ -20,7 +20,7 @@ class CreateCheckoutsTable extends Migration
             $table->string('phone');
             $table->string('account_name');
             $table->string('account_no');
-            $table->tinyInteger('status');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

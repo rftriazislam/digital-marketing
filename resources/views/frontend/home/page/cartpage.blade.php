@@ -31,7 +31,7 @@
             <tbody>
 @php($cart=\Cart::getContent())
 @foreach ($cart as $item)
-    
+    <?php $id=$item->id ?>
 
               <tr>
                 <td>{{ $item->id }}</td>
@@ -74,8 +74,10 @@
          
         </div>
       </div>
-      <div class="ps-section__cart-actions"><a class="ps-btn" href="{{ url('/') }}" style="background-color: #673AB7;"><i class="icon-arrow-left"></i> Back to Shopping</a><a class="ps-btn ps-btn--outline" href="{{ route('checkout') }}" style="color:white"><i class="icon-sync"></i> Proceed to checkout</a></div>
-      </div>
+
+      <div class="ps-section__cart-actions"><a class="ps-btn" href="{{ url('/') }}" style="background-color: #673AB7;"><i class="icon-arrow-left"></i> Back to Shopping</a><a class="ps-btn ps-btn--outline" href="{{ route('checkout')}}" style="color:white"><i class="icon-sync"></i> Proceed to checkout</a></div>
+     
+    </div>
       <div class="ps-section__footer" >
         <div class="row" style="margin-bottom: 20px">
                   
