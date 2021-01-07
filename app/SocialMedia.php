@@ -9,11 +9,11 @@ class SocialMedia extends Model
 
     protected $fillable = [
         'category_id', 'subcategory_id', 'social_name',
-        'social_link', 'friend_follower', 'sell_price', 'description', 'status', 'updated_at'
+        'social_link', 'friends', 'followers', 'price', 'description', 'status', 'updated_at'
     ];
     public function user_info()
     {
-        return $this->hasOne('App\User', 'id', 'user_post_id');
+        return $this->hasOne('App\User', 'id', 'post_id');
     }
     public function category_info()
     {

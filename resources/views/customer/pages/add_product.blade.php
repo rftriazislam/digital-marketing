@@ -11,9 +11,8 @@
                     <figure class="ps-block--form-box">
                         <figcaption>Social Media</figcaption>
                         <div class="ps-block__content">
-                           
                             <div class="form-group form-group--select">
-                                <label>Category Name </label>
+                                <label>Category Name</label>
                                 <input class="form-control" type="text"  disabled value=" {{ $subcategory->category_info->name }}" placeholder="Enter product name..." />
                                 <input class="form-control" type="hidden" name="category_id" value=" {{ $subcategory->category_info->id }}" placeholder="Enter product name..." />
                                

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Checkout;
-use App\MakeMoney;
+use App\MakePayment;
 use App\SocialMedia;
 use App\Subcategory;
 use Illuminate\Http\Request;
@@ -19,10 +19,10 @@ class FrontendController extends Controller
 
         $subcategory = Subcategory::where('status', 1)->get();
         $social = SocialMedia::where('status', 1)->get();
-        $makepayment = MakeMoney::where('status', 1)->get();
+        $make_payment = MakePayment::where('status', 1)->get();
         $category = Category::where('status', 1)->get();
 
-        return view('frontend.home.page.maincontent', compact('category', 'subcategory', 'social', 'makepayment'));
+        return view('frontend.home.page.maincontent', compact('category', 'subcategory', 'social', 'makepayment', 'make_payment'));
     }
     public function addtocart(Request $request)
     {
@@ -35,11 +35,11 @@ class FrontendController extends Controller
             \Cart::add(array(
                 'id' => $product->id,
                 'name' => $product->social_name,
-                'price' => $product->sell_price,
+                'price' => $product->price,
                 'image' => '55',
                 'quantity' => 1,
                 'attributes' => array(
-                    'image' => $product->subcategory_info->subcategory_image,
+                    'image' => $product->subcategory_info->image,
 
                 ),
                 'associatedmodel' => $product
@@ -73,11 +73,11 @@ class FrontendController extends Controller
             \Cart::add(array(
                 'id' => $product->id,
                 'name' => $product->social_name,
-                'price' => $product->sell_price,
+                'price' => $product->price,
                 'image' => '55',
                 'quantity' => 1,
                 'attributes' => array(
-                    'image' => $product->subcategory_info->subcategory_image,
+                    'image' => $product->subcategory_info->image,
                 ),
                 'model' => $product
             ));
@@ -106,7 +106,7 @@ class FrontendController extends Controller
             $makepayment = '';
             return view('frontend.home.page.singlesubcategory', compact('social', 'makepayment'));
         } elseif ($category_name == 'make_payment') {
-            $makepayment = MakeMoney::where('subcategory_id', $id)->where('status', 1)->get();
+            $makepayment = MakePayment::where('subcategory_id', $id)->where('status', 1)->get();
             $social = '';
             return view('frontend.home.page.singlesubcategory', compact('social', 'makepayment'));
         }

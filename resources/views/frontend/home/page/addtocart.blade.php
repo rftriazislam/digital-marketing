@@ -37,13 +37,13 @@
                 <h2>{{ $social->social_name }}</h2>
 
               <div class="ps-product__meta">
-                <h3 style="color:rgb(105, 7, 145)">{{ $social->subcategory_info->subcategory_name }}</h3>
+                <h3 style="color:rgb(105, 7, 145)">{{ $social->subcategory_info->name }}</h3>
               </div>
-                <h4>Sell Price:  ${{ $social->sell_price }}</h4>
+                <h4>Sell Price:  ${{ $social->price }}</h4>
               <div class="ps-product__desc">
                 <p>Link :<a href="{{ $social->social_link}}"><strong>{{ $social->social_link}}</strong></a></p>
-                <p>Friend Follower:<a ><strong>{{ $social->friend_follower}}</strong></a></p>
-                
+                <p>Friend :<a ><strong>{{ $social->friends}}</strong></a></p>
+                <p>Follower:<a ><strong>{{ $social->followers}}</strong></a></p>
                 <ul class="ps-list--dot">
                   <li>Details:<br>{{ $social->description }}</li>
           

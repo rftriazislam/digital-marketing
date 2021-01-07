@@ -6,7 +6,7 @@ Unistag Digital||Product
 @section('maincontent')
 
 <section class="ps-items-listing">
-    {{-- <div class="ps-section__actions"><a class="ps-btn success" href=""><i class="icon icon-plus mr-2"></i>New Product</a></div> --}}
+   
     <div class="ps-section__header">
         <div class="ps-section__filter">
             <form class="ps-form--filter" action="{{ route('customer.addpoduct') }}" method="post">
@@ -48,6 +48,9 @@ Unistag Digital||Product
             
         </div>
     </div>
+
+
+
     <h2 style="text-align:center ">Social Media</h2>
     <div class="ps-section__content">
         <div class="table-responsive">
@@ -60,7 +63,8 @@ Unistag Digital||Product
                         <th>Social Name</th>
                         <th>Link</th>
                         <th>Friends</th>
-                        <th>Sell Price</th>
+                        <th>Followers</th>
+                        <th>Price</th>
                         <th>Image</th>
                         <th>Description</th>
                         <th>status</th>
@@ -78,10 +82,13 @@ Unistag Digital||Product
                         </td>
                         <td>{{ $item->social_link }}</td>
                         <td>
-                            {{ $item->friend_follower }}
+                            {{ $item->friends }}
                         </td> 
                         <td>
-                            <strong>${{ $item->sell_price }}</strong>
+                            {{ $item->followers }}
+                        </td> 
+                        <td>
+                            <strong>${{ $item->price }}</strong>
                         </td>
                         <td>
                           <img src="{{ asset('back_end/social_images') }}/{{ $item->image }}" alt="" style="height:50px;width:70px;">
@@ -91,10 +98,10 @@ Unistag Digital||Product
                         <td>  <div class="btn-group">
                             @if($item->status=='1')
                         
-                            <button type="button" class="btn btn-success"><a href="{{ route('customer.social-status',[$item->id,$item->status])  }}">Active</a>
+                            <button type="button" class="btn btn-success"><a >Active</a>
                             </button>
                             @else
-                            <button type="button" class="btn "  style="background: #673ab7;color:white"><a href="{{ route('customer.social-status',[$item->id,$item->status])  }}" >Inactive</a>
+                            <button type="button" class="btn "  style="background: #673ab7;color:white"><a >Inactive</a>
                             </button>
                             @endif
                           
@@ -119,19 +126,19 @@ Unistag Digital||Product
                         <th>Category</th>
                         <th>Subcategory</th>
                         <th>Send Currency</th>
+                        <th>Send Amount</th>
                         <th>Send Wallet</th>
                         <th>Send Account</th>
                         <th>Get Currency</th>
+                        <th>Get Amount</th>
                         <th>Get Wallet</th>
                         <th>Get Account</th>
-                        <th>Sell Rate</th>
-                        <th>Purchase Rate</th>
-                        <th>Your Rmount</th>
+                        <th>Price</th>
                         <th>Description</th>
                         <th>Status</th>
                     </tr>
                 </thead>
-                {{-- <tbody>
+                <tbody>
                     @foreach ($make_payment->take(8) as $item)
                         
                  
@@ -140,26 +147,29 @@ Unistag Digital||Product
                         <td>{{ $item->category_info->name }}</td>
                         <td>{{ $item->subcategory_info->name }}</td>
                         <td>
-                            <strong>${{ $item->send_currency }}</strong>
+                            <strong>{{ $item->send_currency }}</strong>
                         </td>
+                        <td>
+                            ${{ $item->send_amount }}
+                        </td> 
                         <td><span class="ps-badge success">{{ $item->send_wallet}}</span>
                         </td>
                         <td>{{ $item->send_account }}</td>
                         <td>
-                            ${{ $item->get_currency }}
+                            {{ $item->get_currency }}
+                        </td> 
+                        <td>
+                            ${{ $item->get_amount }}
                         </td> 
                         <td>
                             <strong>{{ $item->get_wallet }}</strong>
                         </td>
                         <td>{{ $item->get_account }}</td>
                         <td>
-                            {{ $item->sell_rate }}
+                            {{ $item->price }}
                         </td> 
         
-                        <td>{{ $item->purchase_rate }}</td>
-                        <td>
-                            {{ $item->your_amount }}
-                        </td> 
+                        
                         <td><p> <?php echo  $item->description ?> </p></td>
                         <td>
                             @if($item->status=='1')
@@ -173,10 +183,16 @@ Unistag Digital||Product
                         </td>
                     </tr>
                    @endforeach
-                </tbody> --}}
+                </tbody>
             </table>
         </div>
     </div>
+
+
+
+
+
+    
 </section>
 <script type=text/javascript>  
 

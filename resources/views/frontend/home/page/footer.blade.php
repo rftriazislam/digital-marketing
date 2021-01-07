@@ -6,9 +6,9 @@
             
   
         <p>
-          <strong>{{ $v_category->category_name }}</strong>
+          <strong>{{ $v_category->name }}</strong>
                @foreach ($v_category->subcategory as $v_subcategory)
-          <a href="#">{{ $v_subcategory->subcategory_name }}</a>
+          <a href="#">{{ $v_subcategory->name }}</a>
          @endforeach
         </p>
         

@@ -78,6 +78,8 @@
                             <li><a href="{{ route('customer.product') }}"><i class="icon-database"></i>Products</a></li>
                             <li><a href="{{ route('customer.product') }}"><i class="icon-database"></i>Balance</a></li>
                             <li><a href="orders.html"><i class="icon-bag2"></i>Orders</a></li>
+
+                            
                             <li><a href="customers.html"><i class="icon-users2"></i>Withdraw</a></li>
                             <li><a href="coupons.html"><i class="icon-percent-circle"></i>Affiliate Link</a></li>
                             <li><a href="customers.html"><i class="icon-users2"></i>Promotional materials</a></li>

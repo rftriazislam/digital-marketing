@@ -14,7 +14,7 @@
                       
                         <div class="ps-block__thumbnail"><img class="img_s" src="{{ asset('back_end/category_images') }}/{{ $v_category->image }}" alt=""></div>
                         <div class="ps-block__content">
-                          <h4>{{ $v_category->category_name}}</h4>
+                          <h4>{{ $v_category->name}}</h4>
                           <ul>
                             <li><a href="shop-default.html">Ok</a></li>
                       

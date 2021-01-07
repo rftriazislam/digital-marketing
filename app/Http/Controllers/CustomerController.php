@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
-use App\MakeMoney;
 use App\MakePayment;
 use App\SocialMedia;
 use App\Subcategory;
@@ -23,7 +22,7 @@ class CustomerController extends Controller
     {
         $category = Category::where('status', 1)->get();
         $social_media = SocialMedia::all();
-        $make_payment = MakeMoney::all();
+        $make_payment = MakePayment::all();
         return view('customer.pages.product', compact('category', 'social_media', 'make_payment'));
     }
 

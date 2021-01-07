@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\Category;
-use App\MakeMoney;
+use App\MakePayment;
 use App\SocialMedia;
 use App\Subcategory;
 use Image;
@@ -165,7 +165,7 @@ class AdminController extends Controller
     }
     public function permissionmakemoney()
     {
-        $makemoney = MakeMoney::all();
+        $makemoney = MakePayment::all();
         return view('admin.pages.permission_makemoney', compact('makemoney'));
     }
     public function socialstatus($id, $status)
@@ -180,7 +180,7 @@ class AdminController extends Controller
     }
     public function makestatus($id, $status)
     {
-        $status_update = MakeMoney::where('id', $id)->first();
+        $status_update = MakePayment::where('id', $id)->first();
         if ($status == 0) {
             $status_update->update(['status' => 1]);
         } else {

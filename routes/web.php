@@ -81,7 +81,7 @@ Route::group(['middleware' => ['auth', 'customer'],], function () {
     Route::post('/customer-save-socialmedia', 'CustomerController@savesocialmedia')->name('customer.savesocialmedia');
 
     Route::get('/customer-social-delete/{id}', 'CustomerController@socialdelete')->name('customer.social-delete');
-    Route::get('/customer-social-status/{id}/{status}', 'CustomerController@socialstatus')->name('customer.social-status');
+
 
 
     Route::post('/customer-save-payment', 'CustomerController@savemakepayment')->name('customer.savemakepayment');

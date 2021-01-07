@@ -32,17 +32,17 @@
                             @foreach ($category as $v_category)
                                 
                             
-                            <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-star"></i>{{ $v_category->category_name }}</a>
+                            <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-star"></i>{{ $v_category->name }}</a>
                               <div class="mega-menu">
                                
                                 <div class="mega-menu__column">
                           
-                                  <h4>{{ $v_category->category_name }}<span class="sub-toggle"></span>
+                                  <h4>{{ $v_category->name }}<span class="sub-toggle"></span>
                                   
                                   </h4>
                                               <ul class="mega-menu__list">
                                                 @foreach ($v_category->subcategory as $v_subcategory)
-                                                <li><a href="#">{{ $v_subcategory->subcategory_name }}</a>
+                                                <li><a href="#">{{ $v_subcategory->name }}</a>
                                                 </li>
                                                @endforeach
                                               </ul>

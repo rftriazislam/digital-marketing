@@ -16,6 +16,6 @@ class Subcategory extends Model
     }
     public function  make_payment_info()
     {
-        return $this->hasMany('App\MakeMoney', 'subcategory_id', 'id')->where('status', 1);
+        return $this->hasMany('App\MakePayment', 'subcategory_id', 'id')->where('status', 1);
     }
 }
