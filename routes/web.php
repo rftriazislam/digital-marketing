@@ -13,29 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 Auth::routes();
 Route::get('/', 'FrontendController@home');
-
 Route::get('/login', 'FrontendController@login')->name('login');
-
 Route::get('/logout-logout', 'Auth\LoginController@logout')->name('logout');
-
 Route::get('/signup ', 'FrontendController@signup');
 
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/category', 'FrontendController@category')->name('category');
 Route::get('/sub-category', 'FrontendController@subcategory')->name('subcategory');
 Route::get('/single-subcategory/{id}/{category_id}', 'FrontendController@singlesubcategory')->name('singlesubcategory');
 
 
 Route::get('/product', 'FrontendController@product')->name('product');
-
 Route::get('/add-cart/{id}/{form_name}', 'FrontendController@addcartpage')->name('addcart');
 Route::get('/cart-page', 'FrontendController@cartpage')->name('cartpage');
 Route::get('/checkout-page', 'FrontendController@checkout')->name('checkout');
@@ -75,19 +68,9 @@ Route::group(['middleware' => ['auth', 'customer'],], function () {
 
     Route::get('/customer', 'CustomerController@index')->name('customer');
     Route::get('/customer-product', 'CustomerController@product')->name('customer.product');
-
-
     Route::post('/get-add-product', 'CustomerController@addproduct')->name('customer.addpoduct');
     Route::post('/customer-save-socialmedia', 'CustomerController@savesocialmedia')->name('customer.savesocialmedia');
-
     Route::get('/customer-social-delete/{id}', 'CustomerController@socialdelete')->name('customer.social-delete');
-
-
-
     Route::post('/customer-save-payment', 'CustomerController@savemakepayment')->name('customer.savemakepayment');
-
-    // Route::post('/customer-makemoney', 'CustomerController@makemoney')->name('customer.makemoney');
-    // Route::get('/customer-save-product', 'CustomerController@saveproduct')->name('customer.saveproduct');
-
     Route::get('/get-subcategory-list', 'CustomerController@getsubcategory')->name('getsubcategory');
 });

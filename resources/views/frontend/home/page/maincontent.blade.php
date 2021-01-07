@@ -58,14 +58,16 @@
                
            
             <div class="ps-product ps-product--inner">
-              <div class="ps-product__thumbnail"><a href="{{ route('addcart',[$v_social->id,$v_social->subcategory_info->category_info->form_name]) }}">
+              <div class="ps-product__thumbnail">
+                <a href="{{ route('addcart',[$v_social->id,$v_social->subcategory_info->category_info->form_name]) }}">
                 <img src="{{ asset('back_end/subcategory_images') }}/{{ $v_social->subcategory_info->image }}" alt=""></a>
                 <div class="ps-product__badge">0%</div>
                
               </div>
               <div class="ps-product__container">
                 <p class="ps-product__price sale" style="font-size: 14px">{{ $v_social->subcategory_info->name }}</p>
-                <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">{{ $v_social->social_name }}</a>
+                <div class="ps-product__content">
+                  <a class="ps-product__title" href="product-default.html">{{ $v_social->social_name }}</a>
                  
                   <div class="ps-product__progress-bar ps-progress" data-value="33">
                    
@@ -110,9 +112,14 @@
              
               </div>
               <div class="ps-product__container">
-                <p class="ps-product__price sale">${{ $v_makepayment->send_amount }} <b style="float:right">{{ $v_makepayment->send_wallet }}</b></p>
+                <p class="ps-product__price sale">${{ $v_makepayment->send_amount }} 
+                  <b style="float:right">{{ $v_makepayment->send_wallet }}</b></p>
+
+
                 <div class="ps-product__content">
+
                   <a class="ps-product__title" href="{{ route('addcart',[$v_makepayment->id,$v_makepayment->subcategory_info->category_info->form_name]) }}">{{ $v_makepayment->subcategory_info->name }}</a>
+               
                   <div class="ps-product__progress-bar ps-progress" data-value="33">
                  <p style="text-align: center">$1 = {{ $v_makepayment->unit_price }} BDT</p>
                  <button class="btn" style="width:100%;color:white;background:#f14705">Add to Card</button>
@@ -194,12 +201,7 @@
                   <div class="ps-product">
                                 <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ asset('back_end/subcategory_images') }}/{{ $make_payment->subcategory_info->image }}" alt=""></a>
                                   <div class="ps-product__badge">Sell</div>
-                                  {{-- <ul class="ps-product__actions">
-                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
-                                    <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
-                                  </ul> --}}
+                             
                                 </div>
                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $make_payment->subcategory_info->name }}</a>
                                   <div class="ps-product__content">
@@ -228,63 +230,6 @@
             @endif
       @endforeach
           </div>
-    {{-- <div class="ps-section--default ps-home-blog">
-      <div class="container">
-        <div class="ps-section__header">
-          <h3>News</h3>
-          <ul class="ps-section__links">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Review Products</a></li>
-            <li><a href="#">Tips & Tricks</a></li>
-            <li><a href="#">Promotions</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">See All</a></li>
-          </ul>
-        </div>
-        <div class="ps-section__content">
-          <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
-                          <div class="ps-post">
-                            <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="blog-detail.html"></a><img src="{{ asset('front_end/img/blog/grid/1.jpg')}}" alt=""></div>
-                            <div class="ps-post__content"><a class="ps-post__meta" href="#">Tips & Tricks</a><a class="ps-post__title" href="#">How To Make A Fresh Juice Blended For Your Family?</a>
-                              <p>December 17, 2017 by<a href="#"> drfurion</a></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
-                          <div class="ps-post">
-                            <div class="ps-post__thumbnail">
-                              <div class="ps-post__badge"><i class="icon-volume-high"></i></div><a class="ps-post__overlay" href="blog-detail.html"></a><img src="{{ asset('front_end/img/blog/grid/2.jpg')}}" alt="">
-                            </div>
-                            <div class="ps-post__content"><a class="ps-post__meta" href="#">Review Product</a><a class="ps-post__title" href="#">Fresh Eggs From Caroline’s Farm</a>
-                              <p>December 17, 2017 by<a href="#"> drfurion</a></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
-                          <div class="ps-post">
-                            <div class="ps-post__thumbnail">
-                              <div class="ps-post__badge"><i class="icon-volume-high"></i></div>
-                              <div class="ps-post__badge"><i class="icon-volume-high"></i></div><a class="ps-post__overlay" href="blog-detail.html"></a><img src="{{ asset('front_end/img/blog/grid/3.jpg')}}" alt="">
-                            </div>
-                            <div class="ps-post__content"><a class="ps-post__meta" href="#">News</a><a class="ps-post__title" href="#">Discover Fresh Organic Farms In Switzeland Villages</a>
-                              <p>December 17, 2017 by<a href="#"> drfurion</a></p>
-                            </div>
-                          </div>
-                        </div>
-          </div>
-        </div>
-        <div class="ps-block--recent-viewed">
-          <div class="ps-block__header">
-            <h3>Recently Viewed Products</h3><a href="shop-default.html">View All</a>
-          </div>
-          
-          <div class="ps-block__content">
-              <a href="#"><img src="{{ asset('front_end/img/products/home-3/healthy/1.jpg')}}" alt=""></a>
-              <a href="#"><img src="{{ asset('front_end/img/products/home-3/technology/2.jpg')}}" alt=""></a>
-              <a href="#"><img src="{{ asset('front_end/img/products/home-3/healthy/3.jpg')}}" alt=""></a></div>
-        </div>
-      </div>
-    </div> --}}
+   
   </div>
 @endsection

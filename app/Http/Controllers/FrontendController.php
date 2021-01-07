@@ -22,7 +22,7 @@ class FrontendController extends Controller
         $make_payment = MakePayment::where('status', 1)->get();
         $category = Category::where('status', 1)->get();
 
-        return view('frontend.home.page.maincontent', compact('category', 'subcategory', 'social', 'makepayment', 'make_payment'));
+        return view('frontend.home.page.maincontent', compact('category', 'subcategory', 'social',  'make_payment'));
     }
     public function addtocart(Request $request)
     {

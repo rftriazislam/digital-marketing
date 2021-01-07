@@ -19,7 +19,10 @@ use App\Http\Controllers\Api\AuthController;
 // });
 
 
-Route::post('/register', [AuthController::class, 'register']);
+Route::post('/signup', [AuthController::class, 'signup']);
+Route::post('/signin', [AuthController::class, 'signin']);
 
 Route::group(['middleware' => 'auth:api'], function () {
+
+    Route::get('/categories', [AuthController::class, 'categories']);
 });
