@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSocialMediaTable extends Migration
+class CreateMakePaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,20 @@ class CreateSocialMediaTable extends Migration
      */
     public function up()
     {
-        Schema::create('social_media', function (Blueprint $table) {
+        Schema::create('make_payments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('post_id');
             $table->integer('category_id');
             $table->integer('subcategory_id');
-            $table->string('social_name');
-            $table->string('social_link');
-            $table->integer('friends');
-            $table->integer('followers');
-            $table->string('image');
-            $table->double('price');
+            $table->string('send_currency');
+            $table->double('send_amount');
+            $table->string('send_wallet');
+            $table->string('send_account');
+            $table->string('get_currency');
+            $table->string('get_wallet');
+            $table->string('get_account');
+            $table->double('get_amount');
+            $table->double('unit_price');
             $table->text('description');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
@@ -37,6 +40,6 @@ class CreateSocialMediaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_media');
+        Schema::dropIfExists('make_payments');
     }
 }

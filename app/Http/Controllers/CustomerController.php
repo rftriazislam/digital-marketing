@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\MakeMoney;
+use App\MakePayment;
 use App\SocialMedia;
 use App\Subcategory;
 use Image;
@@ -22,27 +23,23 @@ class CustomerController extends Controller
     {
         $category = Category::where('status', 1)->get();
         $social_media = SocialMedia::all();
-        $make_money = MakeMoney::all();
-        return view('customer.pages.product', compact('category', 'social_media', 'make_money'));
-    }
-    public function addproduct()
-    {
-        $category = Category::where('status', 1)->get();
-        return view('customer.pages.add_product', compact('category'));
+        $make_payment = MakeMoney::all();
+        return view('customer.pages.product', compact('category', 'social_media', 'make_payment'));
     }
 
 
-    public function addproductlist(Request $request)
+    public function addproduct(Request $request)
     {
         $subcategory = Subcategory::where('id', $request->subcategory_id)->where('category_id', $request->category_id)->where('status', 1)->first();
 
-        // dd($category_id);
-        return view('customer.pages.add_product_list', compact('subcategory'));
+
+        return view('customer.pages.add_product', compact('subcategory'));
     }
+
     public function getsubcategory(Request $request)
     {
         $subcategory = Subcategory::where("category_id", $request->category_id)->where('status', 1)
-            ->pluck("subcategory_name", "id");
+            ->pluck("name", "id");
 
         return response()->json($subcategory);
     }
@@ -59,14 +56,15 @@ class CustomerController extends Controller
         ]);
 
         $social_media_save = new SocialMedia();
-        $social_media_save->user_post_id = Auth::user()->id;
+        $social_media_save->post_id = Auth::user()->id;
         $social_media_save->category_id = $request->category_id;
         $social_media_save->subcategory_id = $request->subcategory_id;
         $social_media_save->social_name = $request->social_name;
         $social_media_save->social_link = $request->social_link;
-        $social_media_save->friend_follower = $request->friend_follower;
+        $social_media_save->friends = $request->friends;
+        $social_media_save->followers = $request->followers;
 
-        $social_media_save->sell_price = $request->sell_price;
+        $social_media_save->price = $request->price;
         $social_media_save->description = $request->description;
         $social_media_save->status = $request->status;
 
@@ -100,7 +98,7 @@ class CustomerController extends Controller
 
     //----------------------------------------------------------------------------social media------------------------------------------------------------
     //----------------------------------------------------------------------------make money--------------------------------------------------------------
-    public function savemakemoney(Request $request)
+    public function savemakepayment(Request $request)
     {
 
         $request->validate([
@@ -109,19 +107,21 @@ class CustomerController extends Controller
 
         ]);
 
-        $make_money_save = new MakeMoney();
-        $make_money_save->user_post_id = Auth::user()->id;
+        $make_money_save = new MakePayment();
+        $make_money_save->post_id = Auth::user()->id;
         $make_money_save->category_id = $request->category_id;
         $make_money_save->subcategory_id = $request->subcategory_id;
         $make_money_save->send_currency = $request->send_currency;
+        $make_money_save->send_amount = $request->send_amount;
         $make_money_save->send_wallet = $request->send_wallet;
         $make_money_save->send_account = $request->send_account;
         $make_money_save->get_currency = $request->get_currency;
+        $make_money_save->get_amount = $request->get_amount;
         $make_money_save->get_wallet = $request->get_wallet;
         $make_money_save->get_account = $request->get_account;
-        $make_money_save->sell_rate = $request->sell_rate;
-        $make_money_save->purchase_rate = $request->purchase_rate;
-        $make_money_save->your_amount = $request->your_amount;
+
+        $make_money_save->unit_price = $request->unit_price;
+
         $make_money_save->description = $request->description;
         $make_money_save->status = $request->status;
         $make_money_save->save();

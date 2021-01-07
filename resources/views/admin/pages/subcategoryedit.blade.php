@@ -19,10 +19,10 @@
                     @forelse ($subcategory_info as $v_subcategory)
                     <tr>
                         <td>{{ $v_subcategory->id }}</td>
-                        <td><strong>{{ $v_subcategory->category_info->category_name}}</strong></td>
+                        <td><strong>{{ $v_subcategory->category_info->name}}</strong></td>
 
-                        <td><strong>{{ $v_subcategory->subcategory_name}}</strong></td>
-                        <td><img  src="{{ asset('back_end/subcategory_images') }}/{{ $v_subcategory->subcategory_image }}" style="width:60px;height:40px"></td>
+                        <td><strong>{{ $v_subcategory->name}}</strong></td>
+                        <td><img  src="{{ asset('back_end/subcategory_images') }}/{{ $v_subcategory->image }}" style="width:60px;height:40px"></td>
                         <td>  
                             <div class="btn-group" role="group" aria-label="Basic example">
                                                                                          
@@ -100,7 +100,7 @@
                         <select class="ps-select" title="Parent" name="category_id">
                             @foreach ($category_info as $v_key)
                         
-                            <option value="{{ $v_key->id }}"   {{$v_key->id == $subcategory_edit->category_id ? 'selected' : '' }}>{{ $v_key->category_name }}</option>
+                            <option value="{{ $v_key->id }}"   {{$v_key->id == $subcategory_edit->category_id ? 'selected' : '' }}>{{ $v_key->name }}</option>
 
                             @endforeach
                         </select>
@@ -111,7 +111,7 @@
                 <div class="form-group">
                     <label>Subcategory Name<sup>*</sup>
                     </label>
-                    <input class="form-control" name="subcategory_name" value="{{ $subcategory_edit->subcategory_name }}" required type="text" placeholder="Enter subcategory name" />
+                    <input class="form-control" name="name" value="{{ $subcategory_edit->name }}" required type="text" placeholder="Enter subcategory name" />
                     <input class="form-control" name="subcategory_id" value="{{ $subcategory_edit->id}}" required type="hidden" placeholder="Enter subcategory name" />
               
                 </div>
@@ -120,7 +120,7 @@
                 <div class="form-group">
                     <label>Image<sup>(Optional)</sup>
                     </label>
-                    <input  type="file" name="subcategory_image" value="{{ $subcategory_edit->subcategory_image }}"  placeholder="Enter subcategory Image" />
+                    <input  type="file" name="image" value="{{ $subcategory_edit->image }}"  placeholder="Enter subcategory Image" />
                 </div>
                 
             </div>

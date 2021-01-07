@@ -9,7 +9,7 @@ Unistag Digital||Product
     {{-- <div class="ps-section__actions"><a class="ps-btn success" href=""><i class="icon icon-plus mr-2"></i>New Product</a></div> --}}
     <div class="ps-section__header">
         <div class="ps-section__filter">
-            <form class="ps-form--filter" action="{{ route('customer.listpoduct') }}" method="post">
+            <form class="ps-form--filter" action="{{ route('customer.addpoduct') }}" method="post">
              @csrf
                 <div class="ps-form__left">
                    
@@ -20,7 +20,7 @@ Unistag Digital||Product
                             <option value="" selected disabled>Select Category</option>
                                     
                             @foreach($category as $v_category)
-                            <option value="{{$v_category->id}}">{{$v_category->category_name}}</option>
+                            <option value="{{$v_category->id}}">{{$v_category->name}}</option>
                              @endforeach
 
                         </select>
@@ -72,8 +72,8 @@ Unistag Digital||Product
                  
                     <tr>
                         <td>{{ $item->id }}</td>
-                        <td>{{ $item->category_info->category_name }}</td>
-                        <td>{{ $item->subcategory_info->subcategory_name }}</td>
+                        <td>{{ $item->category_info->name }}</td>
+                        <td>{{ $item->subcategory_info->name }}</td>
                         <td><span class="ps-badge success">{{ $item->social_name }}</span>
                         </td>
                         <td>{{ $item->social_link }}</td>
@@ -109,7 +109,7 @@ Unistag Digital||Product
             </table>
         </div>
     </div>
-    <h2 style="text-align:center ">Make Money</h2>
+    <h2 style="text-align:center ">Make Payment</h2>
     <div class="ps-section__content">
         <div class="table-responsive">
             <table class="table ps-table">
@@ -131,14 +131,14 @@ Unistag Digital||Product
                         <th>Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    @foreach ($make_money->take(8) as $item)
+                {{-- <tbody>
+                    @foreach ($make_payment->take(8) as $item)
                         
                  
                     <tr>
                         <td>{{ $item->id }}</td>
-                        <td>{{ $item->category_info->category_name }}</td>
-                        <td>{{ $item->subcategory_info->subcategory_name }}</td>
+                        <td>{{ $item->category_info->name }}</td>
+                        <td>{{ $item->subcategory_info->name }}</td>
                         <td>
                             <strong>${{ $item->send_currency }}</strong>
                         </td>
@@ -173,17 +173,17 @@ Unistag Digital||Product
                         </td>
                     </tr>
                    @endforeach
-                </tbody>
+                </tbody> --}}
             </table>
         </div>
     </div>
 </section>
 <script type=text/javascript>  
 
-    // $('#idcategory').change(function(){
-        // console.log("djjdjd");
+    $('#idcategory').change(function(){
+        
     var category_id=$(this).val();
-   
+   console.log("success id found =",category_id);
 
   
      

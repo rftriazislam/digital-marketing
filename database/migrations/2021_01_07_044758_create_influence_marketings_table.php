@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSocialMediaTable extends Migration
+class CreateInfluenceMarketingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,17 @@ class CreateSocialMediaTable extends Migration
      */
     public function up()
     {
-        Schema::create('social_media', function (Blueprint $table) {
+        Schema::create('influence_marketings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('post_id');
             $table->integer('category_id');
             $table->integer('subcategory_id');
             $table->string('social_name');
             $table->string('social_link');
-            $table->integer('friends');
-            $table->integer('followers');
-            $table->string('image');
+            $table->string('hiring_time');
+            $table->string('last_engagement');
+            $table->string('social_type');
+            $table->string('country');
             $table->double('price');
             $table->text('description');
             $table->tinyInteger('status')->default(1);
@@ -37,6 +38,6 @@ class CreateSocialMediaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_media');
+        Schema::dropIfExists('influence_marketings');
     }
 }

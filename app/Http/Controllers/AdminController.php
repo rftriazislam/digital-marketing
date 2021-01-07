@@ -27,10 +27,10 @@ class AdminController extends Controller
     public function categorysave(Request $request)
     {
         $request->validate([
-            'category_name' => 'required|unique:categories,category_name',
+            'name' => 'required|unique:categories,name',
         ]);
         $category_add = new Category();
-        $category_add->category_name = $request->category_name;
+        $category_add->name = $request->name;
         $category_add->form_name = $request->form_name;
         if ($request->hasfile('image')) {
             $image = $request->file('image');
@@ -70,7 +70,7 @@ class AdminController extends Controller
     {
 
         $category_update = Category::find($request->category_id);
-        $category_update->category_name = $request->category_name;
+        $category_update->name = $request->name;
         $category_update->form_name = $request->form_name;
         if ($request->hasfile('image')) {
             $image = $request->file('image');
@@ -89,24 +89,25 @@ class AdminController extends Controller
     public function subcategory()
     {
         $category_info = Category::where('status', 1)->get();
+
         $subcategory_info = Subcategory::OrderBy('id', 'desc')->paginate(10);
         return view('admin.pages.subcategory', compact('subcategory_info', 'category_info'));
     }
     public function subcategorysave(Request $request)
     {
         $request->validate([
-            'subcategory_name' => 'required|unique:subcategories,subcategory_name',
-            'subcategory_image' => 'required',
+            'name' => 'required|unique:subcategories,name',
+            'image' => 'required',
 
         ]);
         $subcategory_add = new Subcategory();
         $subcategory_add->category_id = $request->category_id;
-        $subcategory_add->subcategory_name = $request->subcategory_name;
-        if ($request->hasfile('subcategory_image')) {
-            $image = $request->file('subcategory_image');
+        $subcategory_add->name = $request->name;
+        if ($request->hasfile('image')) {
+            $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(1900, 1140)->save(public_path('back_end/subcategory_images/' . $filename));
-            $subcategory_add->subcategory_image = $filename;
+            $subcategory_add->image = $filename;
         }
         $subcategory_add->save();
 
@@ -142,13 +143,13 @@ class AdminController extends Controller
 
         $subcategory_update = Subcategory::find($request->subcategory_id);
         $subcategory_update->category_id = $request->category_id;
-        $subcategory_update->subcategory_name = $request->subcategory_name;
+        $subcategory_update->name = $request->name;
 
-        if ($request->hasfile('subcategory_image')) {
-            $image = $request->file('subcategory_image');
+        if ($request->hasfile('image')) {
+            $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(1900, 1140)->save(public_path('back_end/subcategory_images/' . $filename));
-            $subcategory_update->subcategory_image = $filename;
+            $subcategory_update->image = $filename;
         }
 
         $subcategory_update->save();

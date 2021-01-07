@@ -75,17 +75,19 @@ Route::group(['middleware' => ['auth', 'customer'],], function () {
 
     Route::get('/customer', 'CustomerController@index')->name('customer');
     Route::get('/customer-product', 'CustomerController@product')->name('customer.product');
-    Route::get('/customer-add-product', 'CustomerController@addproduct')->name('customer.addproduct');
 
+
+    Route::post('/get-add-product', 'CustomerController@addproduct')->name('customer.addpoduct');
     Route::post('/customer-save-socialmedia', 'CustomerController@savesocialmedia')->name('customer.savesocialmedia');
 
     Route::get('/customer-social-delete/{id}', 'CustomerController@socialdelete')->name('customer.social-delete');
     Route::get('/customer-social-status/{id}/{status}', 'CustomerController@socialstatus')->name('customer.social-status');
 
-    Route::post('/get-add-product-list', 'CustomerController@addproductlist')->name('customer.listpoduct');
-    Route::post('/customer-save-makemoney', 'CustomerController@savemakemoney')->name('customer.savemakemoney');
-    Route::post('/customer-makemoney', 'CustomerController@makemoney')->name('customer.makemoney');
-    Route::get('/customer-save-product', 'CustomerController@saveproduct')->name('customer.saveproduct');
+
+    Route::post('/customer-save-payment', 'CustomerController@savemakepayment')->name('customer.savemakepayment');
+
+    // Route::post('/customer-makemoney', 'CustomerController@makemoney')->name('customer.makemoney');
+    // Route::get('/customer-save-product', 'CustomerController@saveproduct')->name('customer.saveproduct');
 
     Route::get('/get-subcategory-list', 'CustomerController@getsubcategory')->name('getsubcategory');
 });

@@ -8,7 +8,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Category name</th>
+                        <th>Name</th>
                         <th>Image</th>
                         <th>Form Code</th>
                         <th>Publication status</th>
@@ -19,7 +19,7 @@
                     @forelse ($category_info as $v_category)
                     <tr>
                         <td>{{ $v_category->id }}</td>
-                        <td><strong>{{ $v_category->category_name}}</strong></td>
+                        <td><strong>{{ $v_category->name}}</strong></td>
                         <td><img  src="{{ asset('back_end/category_images') }}/{{ $v_category->image }}" style="width:60px;height:40px"></td>
                         <td><strong>{{ $v_category->form_name}}</strong></td>
                         <td>  
@@ -96,7 +96,7 @@
                 <div class="form-group">
                     <label>Category Name<sup>*</sup>
                     </label>
-                    <input class="form-control" name="category_name" required type="text" placeholder="Enter category name" />
+                    <input class="form-control" name="name" required type="text" placeholder="Enter category name" />
                 </div>
                 <div class="form-group">
                     <label>Image<sup>(Optional)</sup>
